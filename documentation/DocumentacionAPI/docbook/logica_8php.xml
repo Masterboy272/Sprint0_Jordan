@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_logica_8php" xml:lang="en-US">
+<title>C:/Users/stips/Desktop/Sprint0_Tallal - copia/htdocs/Proyecto_Biometria/src/api/v1.0/logica.php File Reference</title>
+<indexterm><primary>C:/Users/stips/Desktop/Sprint0_Tallal - copia/htdocs/Proyecto_Biometria/src/api/v1.0/logica.php</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_logica_8php_1ad368e47ab28dbd8760958ffe5e4744a5">guardarMedida</link> ($Medicion, $TipoSensor, $Latitud, $Longitud)</para>
+</listitem>
+            <listitem><para><link linkend="_logica_8php_1ac7e9e5dab3d3c2fc3ddd289e56fc1358">obtenerMedida</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_logica_8php_1ad368e47ab28dbd8760958ffe5e4744a5"/><section>
+    <title>guardarMedida()</title>
+<indexterm><primary>guardarMedida</primary><secondary>logica.php</secondary></indexterm>
+<indexterm><primary>logica.php</primary><secondary>guardarMedida</secondary></indexterm>
+<para><computeroutput>guardarMedida ( $Medicion,  $TipoSensor,  $Latitud,  $Longitud)</computeroutput></para>
+<para>Noureddine Tallal Proyecto Medio ambiente </para>
+</section>
+<anchor xml:id="_logica_8php_1ac7e9e5dab3d3c2fc3ddd289e56fc1358"/><section>
+    <title>obtenerMedida()</title>
+<indexterm><primary>obtenerMedida</primary><secondary>logica.php</secondary></indexterm>
+<indexterm><primary>logica.php</primary><secondary>obtenerMedida</secondary></indexterm>
+<para><computeroutput>obtenerMedida ( )</computeroutput></para></section>
+</section>
+</section>

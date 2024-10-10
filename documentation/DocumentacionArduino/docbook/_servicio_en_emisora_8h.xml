@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__servicio_en_emisora_8h" xml:lang="en-US">
+<title>C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/ServicioEnEmisora.h File Reference</title>
+<indexterm><primary>C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/ServicioEnEmisora.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;vector&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_servicio_en_emisora">ServicioEnEmisora</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_class_servicio_en_emisora_1_1_caracteristica">ServicioEnEmisora::Caracteristica</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>template&lt;typename T &gt; </para><para>T * <link linkend="__servicio_en_emisora_8h_1aada7529d57b6678988eaa3e0acf84aff">alReves</link> (T *p, int n)</para>
+</listitem>
+            <listitem><para>uint8_t * <link linkend="__servicio_en_emisora_8h_1a4493ee26019e14ff5945192a58d5da3a">stringAUint8AlReves</link> (const char *pString, uint8_t *pUint, int tamMax)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__servicio_en_emisora_8h_1aada7529d57b6678988eaa3e0acf84aff"/><section>
+    <title>alReves()</title>
+<indexterm><primary>alReves</primary><secondary>ServicioEnEmisora.h</secondary></indexterm>
+<indexterm><primary>ServicioEnEmisora.h</primary><secondary>alReves</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>T * alReves (T * p, int n)</computeroutput></para></section>
+<anchor xml:id="__servicio_en_emisora_8h_1a4493ee26019e14ff5945192a58d5da3a"/><section>
+    <title>stringAUint8AlReves()</title>
+<indexterm><primary>stringAUint8AlReves</primary><secondary>ServicioEnEmisora.h</secondary></indexterm>
+<indexterm><primary>ServicioEnEmisora.h</primary><secondary>stringAUint8AlReves</secondary></indexterm>
+<para><computeroutput>uint8_t * stringAUint8AlReves (const char * pString, uint8_t * pUint, int tamMax)</computeroutput></para></section>
+</section>
+</section>

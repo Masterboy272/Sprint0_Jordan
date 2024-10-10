@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__puerto_serie_8h_source" xml:lang="en-US">
+<title>PuertoSerie.h</title>
+<indexterm><primary>C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/PuertoSerie.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 &#32;
+2 <emphasis role="comment">//&#32;-*-&#32;mode:&#32;c++&#32;-*-</emphasis>
+3 
+4 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+5 <emphasis role="comment">//&#32;Jordi&#32;Bataller&#32;i&#32;Mascarell</emphasis>
+6 <emphasis role="comment">//&#32;2019-07-07</emphasis>
+7 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+8 
+9 <emphasis role="preprocessor">#ifndef&#32;PUERTO_SERIE_H_INCLUIDO</emphasis>
+10 <emphasis role="preprocessor">#define&#32;PUERTO_SERIE_H_INCLUIDO</emphasis>
+11 
+12 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+13 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+14 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_puerto_serie">PuertoSerie</link>&#32;&#32;{
+15 
+16 <emphasis role="keyword">public</emphasis>:
+17 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+18 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+19 &#32;&#32;<link linkend="_class_puerto_serie_1a8f0bfae3f90577642131689eab4489b1">PuertoSerie</link>&#32;(<emphasis role="keywordtype">long</emphasis>&#32;baudios)&#32;{
+20 &#32;&#32;&#32;&#32;Serial.begin(&#32;baudios&#32;);
+21 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;mejor&#32;no&#32;poner&#32;esto&#32;aquí:&#32;while&#32;(&#32;!Serial&#32;)&#32;delay(10);&#32;&#32;&#32;</emphasis>
+22 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+23 
+24 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+25 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+26 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_puerto_serie_1acdb696d30440a38dac61f5f73625935a">esperarDisponible</link>()&#32;{
+27 
+28 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(&#32;!Serial&#32;)&#32;{
+29 &#32;&#32;&#32;&#32;&#32;&#32;delay(10);&#32;&#32;&#32;
+30 &#32;&#32;&#32;&#32;}
+31 
+32 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+33 
+34 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+35 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+36 &#32;&#32;<emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;T&gt;
+37 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_puerto_serie_1ab1b6cecc098aa30e5704dc294deec1f4">escribir</link>&#32;(T&#32;mensaje)&#32;{
+38 &#32;&#32;&#32;&#32;Serial.print(&#32;mensaje&#32;);
+39 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+40 &#32;&#32;
+41 };&#32;<emphasis role="comment">//&#32;class&#32;PuertoSerie</emphasis>
+42 
+43 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+44 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+45 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+46 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+47 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_bbdd_8php" xml:lang="en-US">
+<title>C:/Users/stips/Desktop/Sprint0_Tallal - copia/htdocs/Proyecto_Biometria/src/api/v1.0/bbdd.php File Reference</title>
+<indexterm><primary>C:/Users/stips/Desktop/Sprint0_Tallal - copia/htdocs/Proyecto_Biometria/src/api/v1.0/bbdd.php</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_bbdd_8php_1a27d69f9802668ce67b27c07a4f407d6b">bbddInsert</link> ($Medicion, $TipoSensor, $Latitud, $Longitud)</para>
+</listitem>
+            <listitem><para><link linkend="_bbdd_8php_1ac127ca2321728e09996a908b5eaaa433">buscarBBDD</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_bbdd_8php_1a27d69f9802668ce67b27c07a4f407d6b"/><section>
+    <title>bbddInsert()</title>
+<indexterm><primary>bbddInsert</primary><secondary>bbdd.php</secondary></indexterm>
+<indexterm><primary>bbdd.php</primary><secondary>bbddInsert</secondary></indexterm>
+<para><computeroutput>bbddInsert ( $Medicion,  $TipoSensor,  $Latitud,  $Longitud)</computeroutput></para>
+<para>Noureddine Tallal Sprint 0 :Proyecto Medio ambiente insertar datos en la base de datos <?linebreak?> devolver los datos de la base de datos</para>
+
+<para>------------------&#8212;Me faltan los tests-----------------------------&#8212; </para>
+</section>
+<anchor xml:id="_bbdd_8php_1ac127ca2321728e09996a908b5eaaa433"/><section>
+    <title>buscarBBDD()</title>
+<indexterm><primary>buscarBBDD</primary><secondary>bbdd.php</secondary></indexterm>
+<indexterm><primary>bbdd.php</primary><secondary>buscarBBDD</secondary></indexterm>
+<para><computeroutput>buscarBBDD ( )</computeroutput></para></section>
+</section>
+</section>

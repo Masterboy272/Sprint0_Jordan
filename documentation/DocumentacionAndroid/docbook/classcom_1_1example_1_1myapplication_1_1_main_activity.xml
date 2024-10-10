@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcom_1_1example_1_1myapplication_1_1_main_activity" xml:lang="en-US">
+<title>com.example.myapplication.MainActivity Class Reference</title>
+<indexterm><primary>com.example.myapplication.MainActivity</primary></indexterm>
+<para>Inheritance diagram for com.example.myapplication.MainActivity:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classcom_1_1example_1_1myapplication_1_1_main_activity.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classcom_1_1example_1_1myapplication_1_1_main_activity_1a3d94a985ca0a59567cc9820920b7676c">botonBuscarDispositivosBTLEPulsado</link> (View v)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classcom_1_1example_1_1myapplication_1_1_main_activity_1a784e2615edd19f1df803aebcf34fe314">botonBuscarNuestroDispositivoBTLEPulsado</link> (View v)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classcom_1_1example_1_1myapplication_1_1_main_activity_1a208ef277e174fbfcb624a34ddd0dec6e">botonDetenerBusquedaDispositivosBTLEPulsado</link> (View v)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classcom_1_1example_1_1myapplication_1_1_main_activity_1af7e0dd4525180ee0ef01df9210a36177">onRequestPermissionsResult</link> (int requestCode, String[] permissions, int[] grantResults)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classcom_1_1example_1_1myapplication_1_1_main_activity_1a192898b77fafc9203f54038916974688">boton_enviar_pulsado_client</link> (View quien)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>Button <link linkend="_classcom_1_1example_1_1myapplication_1_1_main_activity_1a44f4b24e7fb836d05e4ad283d2ecb449">mandarPost</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classcom_1_1example_1_1myapplication_1_1_main_activity_1a0ddb77302fa54b860723073a222afe77">onCreate</link> (Bundle savedInstanceState)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_main_activity_1a192898b77fafc9203f54038916974688"/><section>
+    <title>boton_enviar_pulsado_client()</title>
+<indexterm><primary>boton_enviar_pulsado_client</primary><secondary>com.example.myapplication.MainActivity</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.MainActivity</primary><secondary>boton_enviar_pulsado_client</secondary></indexterm>
+<para><computeroutput>void com.example.myapplication.MainActivity.boton_enviar_pulsado_client (View quien)</computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_main_activity_1a3d94a985ca0a59567cc9820920b7676c"/><section>
+    <title>botonBuscarDispositivosBTLEPulsado()</title>
+<indexterm><primary>botonBuscarDispositivosBTLEPulsado</primary><secondary>com.example.myapplication.MainActivity</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.MainActivity</primary><secondary>botonBuscarDispositivosBTLEPulsado</secondary></indexterm>
+<para><computeroutput>void com.example.myapplication.MainActivity.botonBuscarDispositivosBTLEPulsado (View v)</computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_main_activity_1a784e2615edd19f1df803aebcf34fe314"/><section>
+    <title>botonBuscarNuestroDispositivoBTLEPulsado()</title>
+<indexterm><primary>botonBuscarNuestroDispositivoBTLEPulsado</primary><secondary>com.example.myapplication.MainActivity</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.MainActivity</primary><secondary>botonBuscarNuestroDispositivoBTLEPulsado</secondary></indexterm>
+<para><computeroutput>void com.example.myapplication.MainActivity.botonBuscarNuestroDispositivoBTLEPulsado (View v)</computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_main_activity_1a208ef277e174fbfcb624a34ddd0dec6e"/><section>
+    <title>botonDetenerBusquedaDispositivosBTLEPulsado()</title>
+<indexterm><primary>botonDetenerBusquedaDispositivosBTLEPulsado</primary><secondary>com.example.myapplication.MainActivity</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.MainActivity</primary><secondary>botonDetenerBusquedaDispositivosBTLEPulsado</secondary></indexterm>
+<para><computeroutput>void com.example.myapplication.MainActivity.botonDetenerBusquedaDispositivosBTLEPulsado (View v)</computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_main_activity_1a0ddb77302fa54b860723073a222afe77"/><section>
+    <title>onCreate()</title>
+<indexterm><primary>onCreate</primary><secondary>com.example.myapplication.MainActivity</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.MainActivity</primary><secondary>onCreate</secondary></indexterm>
+<para><computeroutput>void com.example.myapplication.MainActivity.onCreate (Bundle savedInstanceState)<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_main_activity_1af7e0dd4525180ee0ef01df9210a36177"/><section>
+    <title>onRequestPermissionsResult()</title>
+<indexterm><primary>onRequestPermissionsResult</primary><secondary>com.example.myapplication.MainActivity</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.MainActivity</primary><secondary>onRequestPermissionsResult</secondary></indexterm>
+<para><computeroutput>void com.example.myapplication.MainActivity.onRequestPermissionsResult (int requestCode, String[] permissions, int[] grantResults)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_main_activity_1a44f4b24e7fb836d05e4ad283d2ecb449"/><section>
+    <title>mandarPost</title>
+<indexterm><primary>mandarPost</primary><secondary>com.example.myapplication.MainActivity</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.MainActivity</primary><secondary>mandarPost</secondary></indexterm>
+<para><computeroutput>Button com.example.myapplication.MainActivity.mandarPost</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/stips/Desktop/Sprint0_Tallal - copia/MyApplication/app/src/main/java/com/example/myapplication/<link linkend="__main_activity_8java">MainActivity.java</link></section>
+</section>

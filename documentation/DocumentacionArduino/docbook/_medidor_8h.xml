@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__medidor_8h" xml:lang="en-US">
+<title>C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/Medidor.h File Reference</title>
+<indexterm><primary>C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/Medidor.h</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_medidor">Medidor</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>double <link linkend="__medidor_8h_1aa4b35122f31c070d6ed2996d4f6ae187">medida_temp</link> (double Vtemp)</para>
+</listitem>
+            <listitem><para>void <link linkend="__medidor_8h_1ad1442cdba77049a36e2bf021422a6f00">Serial1InParser</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="__medidor_8h_1af832d0f3202d40d8dd41ddd765c66880">sensorData</link> [11]</para>
+</listitem>
+            <listitem><para>int <link linkend="__medidor_8h_1a1b0de7b9ff9ea2f5f09b0cde2cc57c99">Pgas</link> = 5</para>
+</listitem>
+            <listitem><para>int <link linkend="__medidor_8h_1ae563113bdccf1ed93e120a8d5bee97a9">Pref</link> = 28</para>
+</listitem>
+            <listitem><para>int <link linkend="__medidor_8h_1a1851a3c631827974624736273c4113b5">Ptemp</link> = 29</para>
+</listitem>
+            <listitem><para>int <link linkend="__medidor_8h_1acc6bd2c9594f49e824c439a293d799f9">Vgas_value</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="__medidor_8h_1aa9b8fd6c47889cab332bccf08e071477">Vref_value</link> = 0</para>
+</listitem>
+            <listitem><para>int <link linkend="__medidor_8h_1ad5c890a2e3ddd839d5dfe28c635e3852">Vtmp_value</link> = 0</para>
+</listitem>
+            <listitem><para>float <link linkend="__medidor_8h_1a036e77f98fbf5ae1d19ec8dc38433c03">M</link> = 499 * pow(10, -6)</para>
+</listitem>
+            <listitem><para>float <link linkend="__medidor_8h_1a039f66cd91482181b873e11865f97333">sensitivityCode</link> = -41.26</para>
+</listitem>
+            <listitem><para>float <link linkend="__medidor_8h_1a99f6dd6f6fba5feb04bc815a9a0385ff">resultado</link> = <link linkend="__medidor_8h_1a039f66cd91482181b873e11865f97333">sensitivityCode</link> * <link linkend="__medidor_8h_1a036e77f98fbf5ae1d19ec8dc38433c03">M</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__medidor_8h_1aa4b35122f31c070d6ed2996d4f6ae187"/><section>
+    <title>medida_temp()</title>
+<indexterm><primary>medida_temp</primary><secondary>Medidor.h</secondary></indexterm>
+<indexterm><primary>Medidor.h</primary><secondary>medida_temp</secondary></indexterm>
+<para><computeroutput>double medida_temp (double Vtemp)</computeroutput></para></section>
+<anchor xml:id="__medidor_8h_1ad1442cdba77049a36e2bf021422a6f00"/><section>
+    <title>Serial1InParser()</title>
+<indexterm><primary>Serial1InParser</primary><secondary>Medidor.h</secondary></indexterm>
+<indexterm><primary>Medidor.h</primary><secondary>Serial1InParser</secondary></indexterm>
+<para><computeroutput>void Serial1InParser ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__medidor_8h_1a036e77f98fbf5ae1d19ec8dc38433c03"/><section>
+    <title>M</title>
+<indexterm><primary>M</primary><secondary>Medidor.h</secondary></indexterm>
+<indexterm><primary>Medidor.h</primary><secondary>M</secondary></indexterm>
+<para><computeroutput>float M = 499 * pow(10, -6)</computeroutput></para></section>
+<anchor xml:id="__medidor_8h_1a1b0de7b9ff9ea2f5f09b0cde2cc57c99"/><section>
+    <title>Pgas</title>
+<indexterm><primary>Pgas</primary><secondary>Medidor.h</secondary></indexterm>
+<indexterm><primary>Medidor.h</primary><secondary>Pgas</secondary></indexterm>
+<para><computeroutput>int Pgas = 5</computeroutput></para></section>
+<anchor xml:id="__medidor_8h_1ae563113bdccf1ed93e120a8d5bee97a9"/><section>
+    <title>Pref</title>
+<indexterm><primary>Pref</primary><secondary>Medidor.h</secondary></indexterm>
+<indexterm><primary>Medidor.h</primary><secondary>Pref</secondary></indexterm>
+<para><computeroutput>int Pref = 28</computeroutput></para></section>
+<anchor xml:id="__medidor_8h_1a1851a3c631827974624736273c4113b5"/><section>
+    <title>Ptemp</title>
+<indexterm><primary>Ptemp</primary><secondary>Medidor.h</secondary></indexterm>
+<indexterm><primary>Medidor.h</primary><secondary>Ptemp</secondary></indexterm>
+<para><computeroutput>int Ptemp = 29</computeroutput></para></section>
+<anchor xml:id="__medidor_8h_1a99f6dd6f6fba5feb04bc815a9a0385ff"/><section>
+    <title>resultado</title>
+<indexterm><primary>resultado</primary><secondary>Medidor.h</secondary></indexterm>
+<indexterm><primary>Medidor.h</primary><secondary>resultado</secondary></indexterm>
+<para><computeroutput>float resultado = <link linkend="__medidor_8h_1a039f66cd91482181b873e11865f97333">sensitivityCode</link> * <link linkend="__medidor_8h_1a036e77f98fbf5ae1d19ec8dc38433c03">M</link></computeroutput></para></section>
+<anchor xml:id="__medidor_8h_1a039f66cd91482181b873e11865f97333"/><section>
+    <title>sensitivityCode</title>
+<indexterm><primary>sensitivityCode</primary><secondary>Medidor.h</secondary></indexterm>
+<indexterm><primary>Medidor.h</primary><secondary>sensitivityCode</secondary></indexterm>
+<para><computeroutput>float sensitivityCode = -41.26</computeroutput></para></section>
+<anchor xml:id="__medidor_8h_1af832d0f3202d40d8dd41ddd765c66880"/><section>
+    <title>sensorData</title>
+<indexterm><primary>sensorData</primary><secondary>Medidor.h</secondary></indexterm>
+<indexterm><primary>Medidor.h</primary><secondary>sensorData</secondary></indexterm>
+<para><computeroutput>int sensorData[11]</computeroutput></para></section>
+<anchor xml:id="__medidor_8h_1acc6bd2c9594f49e824c439a293d799f9"/><section>
+    <title>Vgas_value</title>
+<indexterm><primary>Vgas_value</primary><secondary>Medidor.h</secondary></indexterm>
+<indexterm><primary>Medidor.h</primary><secondary>Vgas_value</secondary></indexterm>
+<para><computeroutput>int Vgas_value = 0</computeroutput></para></section>
+<anchor xml:id="__medidor_8h_1aa9b8fd6c47889cab332bccf08e071477"/><section>
+    <title>Vref_value</title>
+<indexterm><primary>Vref_value</primary><secondary>Medidor.h</secondary></indexterm>
+<indexterm><primary>Medidor.h</primary><secondary>Vref_value</secondary></indexterm>
+<para><computeroutput>int Vref_value = 0</computeroutput></para></section>
+<anchor xml:id="__medidor_8h_1ad5c890a2e3ddd839d5dfe28c635e3852"/><section>
+    <title>Vtmp_value</title>
+<indexterm><primary>Vtmp_value</primary><secondary>Medidor.h</secondary></indexterm>
+<indexterm><primary>Medidor.h</primary><secondary>Vtmp_value</secondary></indexterm>
+<para><computeroutput>int Vtmp_value = 0</computeroutput></para></section>
+</section>
+</section>

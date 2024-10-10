@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_puerto_serie" xml:lang="en-US">
+<title>PuertoSerie Class Reference</title>
+<indexterm><primary>PuertoSerie</primary></indexterm>
+<para>
+<computeroutput>#include &lt;PuertoSerie.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_puerto_serie_1a8f0bfae3f90577642131689eab4489b1">PuertoSerie</link> (long baudios)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_puerto_serie_1acdb696d30440a38dac61f5f73625935a">esperarDisponible</link> ()</para>
+</listitem>
+            <listitem><para>template&lt;typename T &gt; </para><para>void <link linkend="_class_puerto_serie_1ab1b6cecc098aa30e5704dc294deec1f4">escribir</link> (T mensaje)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_puerto_serie_1a8f0bfae3f90577642131689eab4489b1"/><section>
+    <title>PuertoSerie()</title>
+<indexterm><primary>PuertoSerie</primary><secondary>PuertoSerie</secondary></indexterm>
+<indexterm><primary>PuertoSerie</primary><secondary>PuertoSerie</secondary></indexterm>
+<para><computeroutput>PuertoSerie::PuertoSerie (long baudios)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_puerto_serie_1ab1b6cecc098aa30e5704dc294deec1f4"/><section>
+    <title>escribir()</title>
+<indexterm><primary>escribir</primary><secondary>PuertoSerie</secondary></indexterm>
+<indexterm><primary>PuertoSerie</primary><secondary>escribir</secondary></indexterm>
+<computeroutput>template&lt;typename T &gt; </computeroutput><para><computeroutput>void PuertoSerie::escribir (T mensaje)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_puerto_serie_1acdb696d30440a38dac61f5f73625935a"/><section>
+    <title>esperarDisponible()</title>
+<indexterm><primary>esperarDisponible</primary><secondary>PuertoSerie</secondary></indexterm>
+<indexterm><primary>PuertoSerie</primary><secondary>esperarDisponible</secondary></indexterm>
+<para><computeroutput>void PuertoSerie::esperarDisponible ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/<link linkend="__puerto_serie_8h">PuertoSerie.h</link></section>
+</section>

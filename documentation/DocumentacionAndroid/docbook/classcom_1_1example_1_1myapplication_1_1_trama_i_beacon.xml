@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon" xml:lang="en-US">
+<title>com.example.myapplication.TramaIBeacon Class Reference</title>
+<indexterm><primary>com.example.myapplication.TramaIBeacon</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>byte[] <link linkend="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1aebbbd994d9b797de7fcc507609d6735c">getPrefijo</link> ()</para>
+</listitem>
+            <listitem><para>byte[] <link linkend="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1a1fef426d5cfbae9f799f01f0b398eb70">getUUID</link> ()</para>
+</listitem>
+            <listitem><para>byte[] <link linkend="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1af12b64e657f8002007f7d7a84f3a008b">getMajor</link> ()</para>
+</listitem>
+            <listitem><para>byte[] <link linkend="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1ad534b4090024ffa9cb8526515bfd6d68">getMinor</link> ()</para>
+</listitem>
+            <listitem><para>byte <link linkend="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1a58a5bcb8d3c6472decbf9293f42f9299">getTxPower</link> ()</para>
+</listitem>
+            <listitem><para>byte[] <link linkend="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1adbaceae53148d5d83c9e841ce597f511">getLosBytes</link> ()</para>
+</listitem>
+            <listitem><para>byte[] <link linkend="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1a982e85f673f5570b739410690bbf0bc3">getAdvFlags</link> ()</para>
+</listitem>
+            <listitem><para>byte[] <link linkend="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1a9e83ed9685b32883cba1587e89f6416a">getAdvHeader</link> ()</para>
+</listitem>
+            <listitem><para>byte[] <link linkend="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1abf0a01e194887eaec172821dd031ad96">getCompanyID</link> ()</para>
+</listitem>
+            <listitem><para>byte <link linkend="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1a9bd9cfd7dbce470c69c8c61d3527a9cf">getiBeaconType</link> ()</para>
+</listitem>
+            <listitem><para>byte <link linkend="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1a8675787a2aa6b9cf841241b0b9bbeb4e">getiBeaconLength</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1a7da3e3a2117af8a4c6d708d8116e588a">TramaIBeacon</link> (byte[] bytes)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1a7da3e3a2117af8a4c6d708d8116e588a"/><section>
+    <title>TramaIBeacon()</title>
+<indexterm><primary>TramaIBeacon</primary><secondary>com.example.myapplication.TramaIBeacon</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.TramaIBeacon</primary><secondary>TramaIBeacon</secondary></indexterm>
+<para><computeroutput>com.example.myapplication.TramaIBeacon.TramaIBeacon (byte[] bytes)</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1a982e85f673f5570b739410690bbf0bc3"/><section>
+    <title>getAdvFlags()</title>
+<indexterm><primary>getAdvFlags</primary><secondary>com.example.myapplication.TramaIBeacon</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.TramaIBeacon</primary><secondary>getAdvFlags</secondary></indexterm>
+<para><computeroutput>byte[] com.example.myapplication.TramaIBeacon.getAdvFlags ( )</computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1a9e83ed9685b32883cba1587e89f6416a"/><section>
+    <title>getAdvHeader()</title>
+<indexterm><primary>getAdvHeader</primary><secondary>com.example.myapplication.TramaIBeacon</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.TramaIBeacon</primary><secondary>getAdvHeader</secondary></indexterm>
+<para><computeroutput>byte[] com.example.myapplication.TramaIBeacon.getAdvHeader ( )</computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1abf0a01e194887eaec172821dd031ad96"/><section>
+    <title>getCompanyID()</title>
+<indexterm><primary>getCompanyID</primary><secondary>com.example.myapplication.TramaIBeacon</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.TramaIBeacon</primary><secondary>getCompanyID</secondary></indexterm>
+<para><computeroutput>byte[] com.example.myapplication.TramaIBeacon.getCompanyID ( )</computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1a8675787a2aa6b9cf841241b0b9bbeb4e"/><section>
+    <title>getiBeaconLength()</title>
+<indexterm><primary>getiBeaconLength</primary><secondary>com.example.myapplication.TramaIBeacon</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.TramaIBeacon</primary><secondary>getiBeaconLength</secondary></indexterm>
+<para><computeroutput>byte com.example.myapplication.TramaIBeacon.getiBeaconLength ( )</computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1a9bd9cfd7dbce470c69c8c61d3527a9cf"/><section>
+    <title>getiBeaconType()</title>
+<indexterm><primary>getiBeaconType</primary><secondary>com.example.myapplication.TramaIBeacon</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.TramaIBeacon</primary><secondary>getiBeaconType</secondary></indexterm>
+<para><computeroutput>byte com.example.myapplication.TramaIBeacon.getiBeaconType ( )</computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1adbaceae53148d5d83c9e841ce597f511"/><section>
+    <title>getLosBytes()</title>
+<indexterm><primary>getLosBytes</primary><secondary>com.example.myapplication.TramaIBeacon</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.TramaIBeacon</primary><secondary>getLosBytes</secondary></indexterm>
+<para><computeroutput>byte[] com.example.myapplication.TramaIBeacon.getLosBytes ( )</computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1af12b64e657f8002007f7d7a84f3a008b"/><section>
+    <title>getMajor()</title>
+<indexterm><primary>getMajor</primary><secondary>com.example.myapplication.TramaIBeacon</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.TramaIBeacon</primary><secondary>getMajor</secondary></indexterm>
+<para><computeroutput>byte[] com.example.myapplication.TramaIBeacon.getMajor ( )</computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1ad534b4090024ffa9cb8526515bfd6d68"/><section>
+    <title>getMinor()</title>
+<indexterm><primary>getMinor</primary><secondary>com.example.myapplication.TramaIBeacon</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.TramaIBeacon</primary><secondary>getMinor</secondary></indexterm>
+<para><computeroutput>byte[] com.example.myapplication.TramaIBeacon.getMinor ( )</computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1aebbbd994d9b797de7fcc507609d6735c"/><section>
+    <title>getPrefijo()</title>
+<indexterm><primary>getPrefijo</primary><secondary>com.example.myapplication.TramaIBeacon</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.TramaIBeacon</primary><secondary>getPrefijo</secondary></indexterm>
+<para><computeroutput>byte[] com.example.myapplication.TramaIBeacon.getPrefijo ( )</computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1a58a5bcb8d3c6472decbf9293f42f9299"/><section>
+    <title>getTxPower()</title>
+<indexterm><primary>getTxPower</primary><secondary>com.example.myapplication.TramaIBeacon</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.TramaIBeacon</primary><secondary>getTxPower</secondary></indexterm>
+<para><computeroutput>byte com.example.myapplication.TramaIBeacon.getTxPower ( )</computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_trama_i_beacon_1a1fef426d5cfbae9f799f01f0b398eb70"/><section>
+    <title>getUUID()</title>
+<indexterm><primary>getUUID</primary><secondary>com.example.myapplication.TramaIBeacon</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.TramaIBeacon</primary><secondary>getUUID</secondary></indexterm>
+<para><computeroutput>byte[] com.example.myapplication.TramaIBeacon.getUUID ( )</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/stips/Desktop/Sprint0_Tallal - copia/MyApplication/app/src/main/java/com/example/myapplication/<link linkend="__trama_i_beacon_8java">TramaIBeacon.java</link></section>
+</section>

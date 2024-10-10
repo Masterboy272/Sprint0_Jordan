@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_d23d58f437fe90a59d984669cead7b26" xml:lang="en-US">
+<title>C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon Directory Reference</title>
+<indexterm><primary>C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__emisora_b_l_e_8h">EmisoraBLE.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__l_e_d_8h">LED.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__medidor_8h">Medidor.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__publicador_8h">Publicador.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__puerto_serie_8h">PuertoSerie.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__servicio_en_emisora_8h">ServicioEnEmisora.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

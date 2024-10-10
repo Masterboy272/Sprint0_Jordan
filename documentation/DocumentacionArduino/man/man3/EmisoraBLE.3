@@ -1,0 +1,108 @@
+.TH "EmisoraBLE" 3 "Medio Ambiente" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EmisoraBLE
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <EmisoraBLE\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBCallbackConexionEstablecida\fP = void(uint16_t connHandle)"
+.br
+.ti -1c
+.RI "using \fBCallbackConexionTerminada\fP = void(uint16_t connHandle, uint8_t reason)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEmisoraBLE\fP (const char *nombreEmisora_, const uint16_t fabricanteID_, const int8_t txPower_)"
+.br
+.ti -1c
+.RI "void \fBencenderEmisora\fP ()"
+.br
+.ti -1c
+.RI "void \fBencenderEmisora\fP (\fBCallbackConexionEstablecida\fP cbce, \fBCallbackConexionTerminada\fP cbct)"
+.br
+.ti -1c
+.RI "void \fBdetenerAnuncio\fP ()"
+.br
+.ti -1c
+.RI "bool \fBestaAnunciando\fP ()"
+.br
+.ti -1c
+.RI "void \fBemitirAnuncioIBeacon\fP (uint8_t *beaconUUID, int16_t major, int16_t minor, uint8_t rssi)"
+.br
+.ti -1c
+.RI "void \fBemitirAnuncioIBeaconLibre\fP (const char *carga, const uint8_t tamanyoCarga)"
+.br
+.ti -1c
+.RI "bool \fBanyadirServicio\fP (\fBServicioEnEmisora\fP &servicio)"
+.br
+.ti -1c
+.RI "bool \fBanyadirServicioConSusCaracteristicas\fP (\fBServicioEnEmisora\fP &servicio)"
+.br
+.ti -1c
+.RI "template<typename \&.\&.\&. T> bool \fBanyadirServicioConSusCaracteristicas\fP (\fBServicioEnEmisora\fP &servicio, \fBServicioEnEmisora::Caracteristica\fP &caracteristica, T &\&.\&.\&. restoCaracteristicas)"
+.br
+.ti -1c
+.RI "template<typename \&.\&.\&. T> bool \fBanyadirServicioConSusCaracteristicasYActivar\fP (\fBServicioEnEmisora\fP &servicio, T &\&.\&.\&. restoCaracteristicas)"
+.br
+.ti -1c
+.RI "void \fBinstalarCallbackConexionEstablecida\fP (\fBCallbackConexionEstablecida\fP cb)"
+.br
+.ti -1c
+.RI "void \fBinstalarCallbackConexionTerminada\fP (\fBCallbackConexionTerminada\fP cb)"
+.br
+.ti -1c
+.RI "BLEConnection * \fBgetConexion\fP (uint16_t connHandle)"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "using \fBEmisoraBLE::CallbackConexionEstablecida\fP =  void ( uint16_t connHandle )"
+
+.SS "using \fBEmisoraBLE::CallbackConexionTerminada\fP =  void ( uint16_t connHandle, uint8_t reason)"
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "EmisoraBLE::EmisoraBLE (const char * nombreEmisora_, const uint16_t fabricanteID_, const int8_t txPower_)\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool EmisoraBLE::anyadirServicio (\fBServicioEnEmisora\fP & servicio)\fC [inline]\fP"
+
+.SS "bool EmisoraBLE::anyadirServicioConSusCaracteristicas (\fBServicioEnEmisora\fP & servicio)\fC [inline]\fP"
+
+.SS "template<typename \&.\&.\&. T> bool EmisoraBLE::anyadirServicioConSusCaracteristicas (\fBServicioEnEmisora\fP & servicio, \fBServicioEnEmisora::Caracteristica\fP & caracteristica, T &\&.\&.\&. restoCaracteristicas)\fC [inline]\fP"
+
+.SS "template<typename \&.\&.\&. T> bool EmisoraBLE::anyadirServicioConSusCaracteristicasYActivar (\fBServicioEnEmisora\fP & servicio, T &\&.\&.\&. restoCaracteristicas)\fC [inline]\fP"
+
+.SS "void EmisoraBLE::detenerAnuncio ()\fC [inline]\fP"
+
+.SS "void EmisoraBLE::emitirAnuncioIBeacon (uint8_t * beaconUUID, int16_t major, int16_t minor, uint8_t rssi)\fC [inline]\fP"
+
+.SS "void EmisoraBLE::emitirAnuncioIBeaconLibre (const char * carga, const uint8_t tamanyoCarga)\fC [inline]\fP"
+
+.SS "void EmisoraBLE::encenderEmisora ()\fC [inline]\fP"
+
+.SS "void EmisoraBLE::encenderEmisora (\fBCallbackConexionEstablecida\fP cbce, \fBCallbackConexionTerminada\fP cbct)\fC [inline]\fP"
+
+.SS "bool EmisoraBLE::estaAnunciando ()\fC [inline]\fP"
+
+.SS "BLEConnection * EmisoraBLE::getConexion (uint16_t connHandle)\fC [inline]\fP"
+
+.SS "void EmisoraBLE::instalarCallbackConexionEstablecida (\fBCallbackConexionEstablecida\fP cb)\fC [inline]\fP"
+
+.SS "void EmisoraBLE::instalarCallbackConexionTerminada (\fBCallbackConexionTerminada\fP cb)\fC [inline]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Medio Ambiente from the source code\&.

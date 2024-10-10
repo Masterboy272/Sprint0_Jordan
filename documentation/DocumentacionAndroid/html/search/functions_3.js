@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['getadvflags_0',['getAdvFlags',['../classcom_1_1example_1_1myapplication_1_1_trama_i_beacon.html#a982e85f673f5570b739410690bbf0bc3',1,'com::example::myapplication::TramaIBeacon']]],
+  ['getadvheader_1',['getAdvHeader',['../classcom_1_1example_1_1myapplication_1_1_trama_i_beacon.html#a9e83ed9685b32883cba1587e89f6416a',1,'com::example::myapplication::TramaIBeacon']]],
+  ['getcompanyid_2',['getCompanyID',['../classcom_1_1example_1_1myapplication_1_1_trama_i_beacon.html#abf0a01e194887eaec172821dd031ad96',1,'com::example::myapplication::TramaIBeacon']]],
+  ['getibeaconlength_3',['getiBeaconLength',['../classcom_1_1example_1_1myapplication_1_1_trama_i_beacon.html#a8675787a2aa6b9cf841241b0b9bbeb4e',1,'com::example::myapplication::TramaIBeacon']]],
+  ['getibeacontype_4',['getiBeaconType',['../classcom_1_1example_1_1myapplication_1_1_trama_i_beacon.html#a9bd9cfd7dbce470c69c8c61d3527a9cf',1,'com::example::myapplication::TramaIBeacon']]],
+  ['getlatitud_5',['getLatitud',['../classcom_1_1example_1_1myapplication_1_1_medidas.html#aeb4f4b701d7f64ad404cf15c89769dac',1,'com::example::myapplication::Medidas']]],
+  ['getlongitud_6',['getLongitud',['../classcom_1_1example_1_1myapplication_1_1_medidas.html#aefed5de9433f572d0b4af5f801973ffa',1,'com::example::myapplication::Medidas']]],
+  ['getlosbytes_7',['getLosBytes',['../classcom_1_1example_1_1myapplication_1_1_trama_i_beacon.html#adbaceae53148d5d83c9e841ce597f511',1,'com::example::myapplication::TramaIBeacon']]],
+  ['getmajor_8',['getMajor',['../classcom_1_1example_1_1myapplication_1_1_trama_i_beacon.html#af12b64e657f8002007f7d7a84f3a008b',1,'com::example::myapplication::TramaIBeacon']]],
+  ['getmedicion_9',['getMedicion',['../classcom_1_1example_1_1myapplication_1_1_medidas.html#aae90a8c804da0e5d4875d9984d125284',1,'com::example::myapplication::Medidas']]],
+  ['getminor_10',['getMinor',['../classcom_1_1example_1_1myapplication_1_1_trama_i_beacon.html#ad534b4090024ffa9cb8526515bfd6d68',1,'com::example::myapplication::TramaIBeacon']]],
+  ['getprefijo_11',['getPrefijo',['../classcom_1_1example_1_1myapplication_1_1_trama_i_beacon.html#aebbbd994d9b797de7fcc507609d6735c',1,'com::example::myapplication::TramaIBeacon']]],
+  ['gettiposensor_12',['getTipoSensor',['../classcom_1_1example_1_1myapplication_1_1_medidas.html#af453a5e50b42907c9cb93405f000c184',1,'com::example::myapplication::Medidas']]],
+  ['gettxpower_13',['getTxPower',['../classcom_1_1example_1_1myapplication_1_1_trama_i_beacon.html#a58a5bcb8d3c6472decbf9293f42f9299',1,'com::example::myapplication::TramaIBeacon']]],
+  ['getuuid_14',['getUUID',['../classcom_1_1example_1_1myapplication_1_1_trama_i_beacon.html#a1fef426d5cfbae9f799f01f0b398eb70',1,'com::example::myapplication::TramaIBeacon']]],
+  ['guardarmedicion_15',['guardarMedicion',['../classcom_1_1example_1_1myapplication_1_1_logica.html#aa34be89f72ef9e048d92f88939ff992f',1,'com::example::myapplication::Logica']]]
+];

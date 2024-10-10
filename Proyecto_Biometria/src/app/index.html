@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Datos de Sensores</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table thead {
+            background-color: #007bff;
+            color: white;
+        }
+
+        table thead tr th {
+            padding: 15px;
+            text-align: left;
+        }
+
+        table tbody tr td {
+            padding: 15px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        .shadow-lg {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .rounded {
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container shadow-lg rounded">
+        <h1>Datos de Sensores</h1>
+        <div class="table-container">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>MEDICIÓN MAYOR</th>
+                        <th>MEDICIÓN MENOR</th>
+                        <th>LATITUD</th>
+                        <th>LONGITUD</th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+                    <!-- Data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        let url = 'http://192.168.0.18/Proyecto_Biometria/src/api/v1.0/index.php';
+        fetch(url)
+            .then(response => response.json())
+            .then(data => mostrarData(data))
+            .catch(error => console.log(error));
+
+        const mostrarData = (data) => {
+            console.log(data);
+            let body = "";
+            data.forEach(item => {
+                body += `<tr><td>${item.Medicion}</td><td>${item.TipoSensor}</td><td>${item.Latitud}</td><td>${item.Longitud}</td></tr>`;
+            });
+            document.getElementById('data').innerHTML = body;
+        }
+    </script>
+
+</body>
+</html>

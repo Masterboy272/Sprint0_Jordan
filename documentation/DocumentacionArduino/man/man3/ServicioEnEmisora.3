@@ -1,0 +1,65 @@
+.TH "ServicioEnEmisora" 3 "Medio Ambiente" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ServicioEnEmisora
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ServicioEnEmisora\&.h>\fP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBCaracteristica\fP"
+.br
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "using \fBCallbackCaracteristicaEscrita\fP = void(uint16_t conn_handle, BLECharacteristic *chr, uint8_t *data, uint16_t len)"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBServicioEnEmisora\fP (const char *nombreServicio_)"
+.br
+.ti -1c
+.RI "void \fBescribeUUID\fP ()"
+.br
+.ti -1c
+.RI "void \fBanyadirCaracteristica\fP (\fBCaracteristica\fP &car)"
+.br
+.ti -1c
+.RI "void \fBactivarServicio\fP ()"
+.br
+.ti -1c
+.RI "\fBoperator BLEService &\fP ()"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "using \fBServicioEnEmisora::CallbackCaracteristicaEscrita\fP =  void ( uint16_t conn_handle, BLECharacteristic * chr, uint8_t * data, uint16_t len)"
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ServicioEnEmisora::ServicioEnEmisora (const char * nombreServicio_)\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ServicioEnEmisora::activarServicio ()\fC [inline]\fP"
+
+.SS "void ServicioEnEmisora::anyadirCaracteristica (\fBCaracteristica\fP & car)\fC [inline]\fP"
+
+.SS "void ServicioEnEmisora::escribeUUID ()\fC [inline]\fP"
+
+.SS "ServicioEnEmisora::operator BLEService & ()\fC [inline]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Medio Ambiente from the source code\&.

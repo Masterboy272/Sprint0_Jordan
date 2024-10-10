@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_servicio_en_emisora" xml:lang="en-US">
+<title>ServicioEnEmisora Class Reference</title>
+<indexterm><primary>ServicioEnEmisora</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ServicioEnEmisora.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_servicio_en_emisora_1_1_caracteristica">Caracteristica</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_class_servicio_en_emisora_1afb9fef1029d1afd6368128a400efdc50">CallbackCaracteristicaEscrita</link> = void(uint16_t conn_handle, BLECharacteristic *chr, uint8_t *data, uint16_t len)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_servicio_en_emisora_1a17d9dcafb552b3e76bc7ff2e6fb238f2">ServicioEnEmisora</link> (const char *nombreServicio_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_servicio_en_emisora_1a59267e82dca13b83913e578efacce794">escribeUUID</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_servicio_en_emisora_1af25a77d5c2b3edfe5c99fc9fa00729bf">anyadirCaracteristica</link> (<link linkend="_class_servicio_en_emisora_1_1_caracteristica">Caracteristica</link> &amp;car)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_servicio_en_emisora_1a387f170420610e1ba1fe71b471c1ca23">activarServicio</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_servicio_en_emisora_1a0d04b53b2379140293924ef1ecbfeebe">operator BLEService &amp;</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_servicio_en_emisora_1afb9fef1029d1afd6368128a400efdc50"/><section>
+    <title>CallbackCaracteristicaEscrita</title>
+<indexterm><primary>CallbackCaracteristicaEscrita</primary><secondary>ServicioEnEmisora</secondary></indexterm>
+<indexterm><primary>ServicioEnEmisora</primary><secondary>CallbackCaracteristicaEscrita</secondary></indexterm>
+<para><computeroutput>using <link linkend="_class_servicio_en_emisora_1afb9fef1029d1afd6368128a400efdc50">ServicioEnEmisora::CallbackCaracteristicaEscrita</link> =  void ( uint16_t conn_handle, BLECharacteristic * chr, uint8_t * data, uint16_t len)</computeroutput></para></section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_servicio_en_emisora_1a17d9dcafb552b3e76bc7ff2e6fb238f2"/><section>
+    <title>ServicioEnEmisora()</title>
+<indexterm><primary>ServicioEnEmisora</primary><secondary>ServicioEnEmisora</secondary></indexterm>
+<indexterm><primary>ServicioEnEmisora</primary><secondary>ServicioEnEmisora</secondary></indexterm>
+<para><computeroutput>ServicioEnEmisora::ServicioEnEmisora (const char * nombreServicio_)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_servicio_en_emisora_1a387f170420610e1ba1fe71b471c1ca23"/><section>
+    <title>activarServicio()</title>
+<indexterm><primary>activarServicio</primary><secondary>ServicioEnEmisora</secondary></indexterm>
+<indexterm><primary>ServicioEnEmisora</primary><secondary>activarServicio</secondary></indexterm>
+<para><computeroutput>void ServicioEnEmisora::activarServicio ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_servicio_en_emisora_1af25a77d5c2b3edfe5c99fc9fa00729bf"/><section>
+    <title>anyadirCaracteristica()</title>
+<indexterm><primary>anyadirCaracteristica</primary><secondary>ServicioEnEmisora</secondary></indexterm>
+<indexterm><primary>ServicioEnEmisora</primary><secondary>anyadirCaracteristica</secondary></indexterm>
+<para><computeroutput>void ServicioEnEmisora::anyadirCaracteristica (<link linkend="_class_servicio_en_emisora_1_1_caracteristica">Caracteristica</link> &amp; car)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_servicio_en_emisora_1a59267e82dca13b83913e578efacce794"/><section>
+    <title>escribeUUID()</title>
+<indexterm><primary>escribeUUID</primary><secondary>ServicioEnEmisora</secondary></indexterm>
+<indexterm><primary>ServicioEnEmisora</primary><secondary>escribeUUID</secondary></indexterm>
+<para><computeroutput>void ServicioEnEmisora::escribeUUID ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_servicio_en_emisora_1a0d04b53b2379140293924ef1ecbfeebe"/><section>
+    <title>operator BLEService &amp;()</title>
+<indexterm><primary>operator BLEService &amp;</primary><secondary>ServicioEnEmisora</secondary></indexterm>
+<indexterm><primary>ServicioEnEmisora</primary><secondary>operator BLEService &amp;</secondary></indexterm>
+<para><computeroutput>ServicioEnEmisora::operator BLEService &amp; ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/<link linkend="__servicio_en_emisora_8h">ServicioEnEmisora.h</link></section>
+</section>

@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_publicador" xml:lang="en-US">
+<title>Publicador Class Reference</title>
+<indexterm><primary>Publicador</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Publicador.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_publicador_1a0dbad8398e97eaf1d6ecdd854f286d38">MedicionesID</link> { <link linkend="_class_publicador_1a0dbad8398e97eaf1d6ecdd854f286d38a32fd7e9cb7b0274a336e9dc35614f638">CO2</link> = 11
+, <link linkend="_class_publicador_1a0dbad8398e97eaf1d6ecdd854f286d38aba4e4bf52d95cc981259e2a2192e6047">TEMPERATURA</link> = 12
+, <link linkend="_class_publicador_1a0dbad8398e97eaf1d6ecdd854f286d38ad30d25e445bf4115dfd39ddcdb665ca4">RUIDO</link> = 13
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_publicador_1aa6e6635cf76f5be0d84b8e7780156151">Publicador</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_publicador_1a10f309e5dfd232d204c5d2952581fe16">encenderEmisora</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_publicador_1a2ed2009b9cec631024263659be882985">publicarCO2</link> (int16_t valorCO2, uint8_t contador, long tiempoEspera)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_publicador_1a674ec7d8321b9792835cd935c6196dec">publicarTemperatura</link> (int16_t valorTemperatura, uint8_t contador, long tiempoEspera)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_emisora_b_l_e">EmisoraBLE</link> <link linkend="_class_publicador_1a86ef036c1b64668ac54dfe87b595aec5">laEmisora</link></para>
+</listitem>
+            <listitem><para>const int <link linkend="_class_publicador_1a339fb2ba061a53478572ade00866408c">RSSI</link> = -53</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_publicador_1a0dbad8398e97eaf1d6ecdd854f286d38"/><section>
+    <title>MedicionesID</title>
+<indexterm><primary>MedicionesID</primary><secondary>Publicador</secondary></indexterm>
+<indexterm><primary>Publicador</primary><secondary>MedicionesID</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_publicador_1a0dbad8398e97eaf1d6ecdd854f286d38">Publicador::MedicionesID</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>CO2</primary><secondary>Publicador</secondary></indexterm>
+<indexterm><primary>Publicador</primary><secondary>CO2</secondary></indexterm>
+<anchor xml:id="_class_publicador_1a0dbad8398e97eaf1d6ecdd854f286d38a32fd7e9cb7b0274a336e9dc35614f638"/>CO2</entry><entry></entry></row><row><entry><indexterm><primary>TEMPERATURA</primary><secondary>Publicador</secondary></indexterm>
+<indexterm><primary>Publicador</primary><secondary>TEMPERATURA</secondary></indexterm>
+<anchor xml:id="_class_publicador_1a0dbad8398e97eaf1d6ecdd854f286d38aba4e4bf52d95cc981259e2a2192e6047"/>TEMPERATURA</entry><entry></entry></row><row><entry><indexterm><primary>RUIDO</primary><secondary>Publicador</secondary></indexterm>
+<indexterm><primary>Publicador</primary><secondary>RUIDO</secondary></indexterm>
+<anchor xml:id="_class_publicador_1a0dbad8398e97eaf1d6ecdd854f286d38ad30d25e445bf4115dfd39ddcdb665ca4"/>RUIDO</entry><entry></entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_publicador_1aa6e6635cf76f5be0d84b8e7780156151"/><section>
+    <title>Publicador()</title>
+<indexterm><primary>Publicador</primary><secondary>Publicador</secondary></indexterm>
+<indexterm><primary>Publicador</primary><secondary>Publicador</secondary></indexterm>
+<para><computeroutput>Publicador::Publicador ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_publicador_1a10f309e5dfd232d204c5d2952581fe16"/><section>
+    <title>encenderEmisora()</title>
+<indexterm><primary>encenderEmisora</primary><secondary>Publicador</secondary></indexterm>
+<indexterm><primary>Publicador</primary><secondary>encenderEmisora</secondary></indexterm>
+<para><computeroutput>void Publicador::encenderEmisora ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_publicador_1a2ed2009b9cec631024263659be882985"/><section>
+    <title>publicarCO2()</title>
+<indexterm><primary>publicarCO2</primary><secondary>Publicador</secondary></indexterm>
+<indexterm><primary>Publicador</primary><secondary>publicarCO2</secondary></indexterm>
+<para><computeroutput>void Publicador::publicarCO2 (int16_t valorCO2, uint8_t contador, long tiempoEspera)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_publicador_1a674ec7d8321b9792835cd935c6196dec"/><section>
+    <title>publicarTemperatura()</title>
+<indexterm><primary>publicarTemperatura</primary><secondary>Publicador</secondary></indexterm>
+<indexterm><primary>Publicador</primary><secondary>publicarTemperatura</secondary></indexterm>
+<para><computeroutput>void Publicador::publicarTemperatura (int16_t valorTemperatura, uint8_t contador, long tiempoEspera)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_publicador_1a86ef036c1b64668ac54dfe87b595aec5"/><section>
+    <title>laEmisora</title>
+<indexterm><primary>laEmisora</primary><secondary>Publicador</secondary></indexterm>
+<indexterm><primary>Publicador</primary><secondary>laEmisora</secondary></indexterm>
+<para><computeroutput><link linkend="_class_emisora_b_l_e">EmisoraBLE</link> Publicador::laEmisora</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">{
+&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;GTI-3A_TALLAL&quot;</emphasis>,&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;0x004c,&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;4&#32;
+&#32;&#32;&#32;&#32;&#32;&#32;}
+</programlisting></section>
+<anchor xml:id="_class_publicador_1a339fb2ba061a53478572ade00866408c"/><section>
+    <title>RSSI</title>
+<indexterm><primary>RSSI</primary><secondary>Publicador</secondary></indexterm>
+<indexterm><primary>Publicador</primary><secondary>RSSI</secondary></indexterm>
+<para><computeroutput>const int Publicador::RSSI = -53</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/<link linkend="__publicador_8h">Publicador.h</link></section>
+</section>
