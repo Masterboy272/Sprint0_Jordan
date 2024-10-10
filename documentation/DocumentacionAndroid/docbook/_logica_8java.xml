@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__logica_8java" xml:lang="en-US">
+<title>C:/Users/stips/Desktop/Sprint0_Tallal - copia/MyApplication/app/src/main/java/com/example/myapplication/Logica.java File Reference</title>
+<indexterm><primary>C:/Users/stips/Desktop/Sprint0_Tallal - copia/MyApplication/app/src/main/java/com/example/myapplication/Logica.java</primary></indexterm>
+<programlisting linenumbering="unnumbered">import android.util.Log;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classcom_1_1example_1_1myapplication_1_1_logica">com.example.myapplication.Logica</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Packages    </title>
+        <itemizedlist>
+            <listitem><para>package <link linkend="_namespacecom_1_1example_1_1myapplication">com.example.myapplication</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

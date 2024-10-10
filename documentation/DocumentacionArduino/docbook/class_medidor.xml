@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_medidor" xml:lang="en-US">
+<title>Medidor Class Reference</title>
+<indexterm><primary>Medidor</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Medidor.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_medidor_1af8dd93b883c64f28bd898c4baaa73dc9">Medidor</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_medidor_1a1d26e993a9198fac83d6edad4cc30bcf">iniciarMedidor</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_medidor_1a203ae9be3a2bf0965bd9316fcd203e19">medirCO2</link> ()</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_medidor_1a742eaebe02e1d1d67df55f7a73878421">medirTemperatura</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_medidor_1af8dd93b883c64f28bd898c4baaa73dc9"/><section>
+    <title>Medidor()</title>
+<indexterm><primary>Medidor</primary><secondary>Medidor</secondary></indexterm>
+<indexterm><primary>Medidor</primary><secondary>Medidor</secondary></indexterm>
+<para><computeroutput>Medidor::Medidor ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_medidor_1a1d26e993a9198fac83d6edad4cc30bcf"/><section>
+    <title>iniciarMedidor()</title>
+<indexterm><primary>iniciarMedidor</primary><secondary>Medidor</secondary></indexterm>
+<indexterm><primary>Medidor</primary><secondary>iniciarMedidor</secondary></indexterm>
+<para><computeroutput>void Medidor::iniciarMedidor ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_medidor_1a203ae9be3a2bf0965bd9316fcd203e19"/><section>
+    <title>medirCO2()</title>
+<indexterm><primary>medirCO2</primary><secondary>Medidor</secondary></indexterm>
+<indexterm><primary>Medidor</primary><secondary>medirCO2</secondary></indexterm>
+<para><computeroutput>int Medidor::medirCO2 ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_medidor_1a742eaebe02e1d1d67df55f7a73878421"/><section>
+    <title>medirTemperatura()</title>
+<indexterm><primary>medirTemperatura</primary><secondary>Medidor</secondary></indexterm>
+<indexterm><primary>Medidor</primary><secondary>medirTemperatura</secondary></indexterm>
+<para><computeroutput>int Medidor::medirTemperatura ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/<link linkend="__medidor_8h">Medidor.h</link></section>
+</section>

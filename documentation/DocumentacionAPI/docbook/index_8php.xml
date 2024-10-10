@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index_8php" xml:lang="en-US">
+<title>C:/Users/stips/Desktop/Sprint0_Tallal - copia/htdocs/Proyecto_Biometria/src/api/v1.0/index.php File Reference</title>
+<indexterm><primary>C:/Users/stips/Desktop/Sprint0_Tallal - copia/htdocs/Proyecto_Biometria/src/api/v1.0/index.php</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_index_8php_1ac35616c0a7b6ea8536170fa54c2c6ea5">$_METODO</link> = $_SERVER[&apos;REQUEST_METHOD&apos;]</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_index_8php_1ac35616c0a7b6ea8536170fa54c2c6ea5"/><section>
+    <title>$_METODO</title>
+<indexterm><primary>$_METODO</primary><secondary>index.php</secondary></indexterm>
+<indexterm><primary>index.php</primary><secondary>$_METODO</secondary></indexterm>
+<para><computeroutput>$_METODO = $_SERVER[&apos;REQUEST_METHOD&apos;]</computeroutput></para>
+<para>Noureddine Tallal</para>
+
+<para>Proyecto Medio ambiente ---------&#8212;Handling the request-------------------&#8212; </para>
+</section>
+</section>
+</section>

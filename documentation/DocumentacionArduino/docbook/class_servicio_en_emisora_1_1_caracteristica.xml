@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_servicio_en_emisora_1_1_caracteristica" xml:lang="en-US">
+<title>ServicioEnEmisora::Caracteristica Class Reference</title>
+<indexterm><primary>ServicioEnEmisora::Caracteristica</primary></indexterm>
+<para>
+<computeroutput>#include &lt;ServicioEnEmisora.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_servicio_en_emisora_1_1_caracteristica_1a639f47133a8406e84aa237c123fd2e63">Caracteristica</link> (const char *nombreCaracteristica_)</para>
+</listitem>
+            <listitem><para><link linkend="_class_servicio_en_emisora_1_1_caracteristica_1a646c15ae6b57fc25d144d2e2ed160c0c">Caracteristica</link> (const char *nombreCaracteristica_, uint8_t props, SecureMode_t permisoRead, SecureMode_t permisoWrite, uint8_t tam)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_servicio_en_emisora_1_1_caracteristica_1a7fe53370615887c50304300457c1114c">asignarPropiedadesPermisosYTamanyoDatos</link> (uint8_t props, SecureMode_t permisoRead, SecureMode_t permisoWrite, uint8_t tam)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_servicio_en_emisora_1_1_caracteristica_1ac6642d92b4f2d80ee6c21081972987d7">escribirDatos</link> (const char *str)</para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_class_servicio_en_emisora_1_1_caracteristica_1ae3369332d51fb6e70a300b54c3a4f95d">notificarDatos</link> (const char *str)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_servicio_en_emisora_1_1_caracteristica_1ac3355c1918c2eddf58d34df1b30dd60d">instalarCallbackCaracteristicaEscrita</link> (<link linkend="_class_servicio_en_emisora_1afb9fef1029d1afd6368128a400efdc50">CallbackCaracteristicaEscrita</link> cb)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_servicio_en_emisora_1_1_caracteristica_1ad93e0c5998aeb15c920cd5d6db7a0e3b">activar</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_servicio_en_emisora_1_1_caracteristica_1a639f47133a8406e84aa237c123fd2e63"/><section>
+    <title>Caracteristica()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Caracteristica</primary><secondary>ServicioEnEmisora::Caracteristica</secondary></indexterm>
+<indexterm><primary>ServicioEnEmisora::Caracteristica</primary><secondary>Caracteristica</secondary></indexterm>
+<para><computeroutput>ServicioEnEmisora::Caracteristica::Caracteristica (const char * nombreCaracteristica_)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_servicio_en_emisora_1_1_caracteristica_1a646c15ae6b57fc25d144d2e2ed160c0c"/><section>
+    <title>Caracteristica()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Caracteristica</primary><secondary>ServicioEnEmisora::Caracteristica</secondary></indexterm>
+<indexterm><primary>ServicioEnEmisora::Caracteristica</primary><secondary>Caracteristica</secondary></indexterm>
+<para><computeroutput>ServicioEnEmisora::Caracteristica::Caracteristica (const char * nombreCaracteristica_, uint8_t props, SecureMode_t permisoRead, SecureMode_t permisoWrite, uint8_t tam)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_servicio_en_emisora_1_1_caracteristica_1ad93e0c5998aeb15c920cd5d6db7a0e3b"/><section>
+    <title>activar()</title>
+<indexterm><primary>activar</primary><secondary>ServicioEnEmisora::Caracteristica</secondary></indexterm>
+<indexterm><primary>ServicioEnEmisora::Caracteristica</primary><secondary>activar</secondary></indexterm>
+<para><computeroutput>void ServicioEnEmisora::Caracteristica::activar ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_servicio_en_emisora_1_1_caracteristica_1a7fe53370615887c50304300457c1114c"/><section>
+    <title>asignarPropiedadesPermisosYTamanyoDatos()</title>
+<indexterm><primary>asignarPropiedadesPermisosYTamanyoDatos</primary><secondary>ServicioEnEmisora::Caracteristica</secondary></indexterm>
+<indexterm><primary>ServicioEnEmisora::Caracteristica</primary><secondary>asignarPropiedadesPermisosYTamanyoDatos</secondary></indexterm>
+<para><computeroutput>void ServicioEnEmisora::Caracteristica::asignarPropiedadesPermisosYTamanyoDatos (uint8_t props, SecureMode_t permisoRead, SecureMode_t permisoWrite, uint8_t tam)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_servicio_en_emisora_1_1_caracteristica_1ac6642d92b4f2d80ee6c21081972987d7"/><section>
+    <title>escribirDatos()</title>
+<indexterm><primary>escribirDatos</primary><secondary>ServicioEnEmisora::Caracteristica</secondary></indexterm>
+<indexterm><primary>ServicioEnEmisora::Caracteristica</primary><secondary>escribirDatos</secondary></indexterm>
+<para><computeroutput>uint16_t ServicioEnEmisora::Caracteristica::escribirDatos (const char * str)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_servicio_en_emisora_1_1_caracteristica_1ac3355c1918c2eddf58d34df1b30dd60d"/><section>
+    <title>instalarCallbackCaracteristicaEscrita()</title>
+<indexterm><primary>instalarCallbackCaracteristicaEscrita</primary><secondary>ServicioEnEmisora::Caracteristica</secondary></indexterm>
+<indexterm><primary>ServicioEnEmisora::Caracteristica</primary><secondary>instalarCallbackCaracteristicaEscrita</secondary></indexterm>
+<para><computeroutput>void ServicioEnEmisora::Caracteristica::instalarCallbackCaracteristicaEscrita (<link linkend="_class_servicio_en_emisora_1afb9fef1029d1afd6368128a400efdc50">CallbackCaracteristicaEscrita</link> cb)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_servicio_en_emisora_1_1_caracteristica_1ae3369332d51fb6e70a300b54c3a4f95d"/><section>
+    <title>notificarDatos()</title>
+<indexterm><primary>notificarDatos</primary><secondary>ServicioEnEmisora::Caracteristica</secondary></indexterm>
+<indexterm><primary>ServicioEnEmisora::Caracteristica</primary><secondary>notificarDatos</secondary></indexterm>
+<para><computeroutput>uint16_t ServicioEnEmisora::Caracteristica::notificarDatos (const char * str)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/<link linkend="__servicio_en_emisora_8h">ServicioEnEmisora.h</link></section>
+</section>

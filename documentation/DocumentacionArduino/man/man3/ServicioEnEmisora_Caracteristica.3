@@ -1,0 +1,57 @@
+.TH "ServicioEnEmisora::Caracteristica" 3 "Medio Ambiente" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ServicioEnEmisora::Caracteristica
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ServicioEnEmisora\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCaracteristica\fP (const char *nombreCaracteristica_)"
+.br
+.ti -1c
+.RI "\fBCaracteristica\fP (const char *nombreCaracteristica_, uint8_t props, SecureMode_t permisoRead, SecureMode_t permisoWrite, uint8_t tam)"
+.br
+.ti -1c
+.RI "void \fBasignarPropiedadesPermisosYTamanyoDatos\fP (uint8_t props, SecureMode_t permisoRead, SecureMode_t permisoWrite, uint8_t tam)"
+.br
+.ti -1c
+.RI "uint16_t \fBescribirDatos\fP (const char *str)"
+.br
+.ti -1c
+.RI "uint16_t \fBnotificarDatos\fP (const char *str)"
+.br
+.ti -1c
+.RI "void \fBinstalarCallbackCaracteristicaEscrita\fP (\fBCallbackCaracteristicaEscrita\fP cb)"
+.br
+.ti -1c
+.RI "void \fBactivar\fP ()"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ServicioEnEmisora::Caracteristica::Caracteristica (const char * nombreCaracteristica_)\fC [inline]\fP"
+
+.SS "ServicioEnEmisora::Caracteristica::Caracteristica (const char * nombreCaracteristica_, uint8_t props, SecureMode_t permisoRead, SecureMode_t permisoWrite, uint8_t tam)\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ServicioEnEmisora::Caracteristica::activar ()\fC [inline]\fP"
+
+.SS "void ServicioEnEmisora::Caracteristica::asignarPropiedadesPermisosYTamanyoDatos (uint8_t props, SecureMode_t permisoRead, SecureMode_t permisoWrite, uint8_t tam)\fC [inline]\fP"
+
+.SS "uint16_t ServicioEnEmisora::Caracteristica::escribirDatos (const char * str)\fC [inline]\fP"
+
+.SS "void ServicioEnEmisora::Caracteristica::instalarCallbackCaracteristicaEscrita (\fBCallbackCaracteristicaEscrita\fP cb)\fC [inline]\fP"
+
+.SS "uint16_t ServicioEnEmisora::Caracteristica::notificarDatos (const char * str)\fC [inline]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Medio Ambiente from the source code\&.

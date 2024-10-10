@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__servicio_en_emisora_8h_source" xml:lang="en-US">
+<title>ServicioEnEmisora.h</title>
+<indexterm><primary>C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/ServicioEnEmisora.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;-*-&#32;mode:&#32;c++&#32;-*-</emphasis>
+2 
+3 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+4 <emphasis role="comment">//&#32;Jordi&#32;Bataller&#32;i&#32;Mascarell</emphasis>
+5 <emphasis role="comment">//&#32;2019-07-17</emphasis>
+6 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+7 <emphasis role="preprocessor">#ifndef&#32;SERVICIO_EMISORA_H_INCLUIDO</emphasis>
+8 <emphasis role="preprocessor">#define&#32;SERVICIO_EMISORA_H_INCLUIDO</emphasis>
+9 
+10 <emphasis role="comment">//&#32;----------------------------------------------------</emphasis>
+11 <emphasis role="comment">//&#32;----------------------------------------------------</emphasis>
+12 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+13 
+14 <emphasis role="comment">//&#32;----------------------------------------------------</emphasis>
+15 <emphasis role="comment">//&#32;alReves()&#32;utilidad</emphasis>
+16 <emphasis role="comment">//&#32;pone&#32;al&#32;revés&#32;el&#32;contenido&#32;de&#32;una&#32;array&#32;en&#32;el&#32;mismo&#32;array</emphasis>
+17 <emphasis role="comment">//&#32;----------------------------------------------------</emphasis>
+18 <emphasis role="keyword">template</emphasis>&lt;&#32;<emphasis role="keyword">typename</emphasis>&#32;T&#32;&gt;
+19 T&#32;*&#32;&#32;<link linkend="__servicio_en_emisora_8h_1aada7529d57b6678988eaa3e0acf84aff">alReves</link>(&#32;T&#32;*&#32;p,&#32;<emphasis role="keywordtype">int</emphasis>&#32;n&#32;)&#32;{
+20 &#32;&#32;T&#32;aux;
+21 
+22 &#32;&#32;<emphasis role="keywordflow">for</emphasis>(&#32;<emphasis role="keywordtype">int</emphasis>&#32;i=0;&#32;i&#32;&lt;&#32;n/2;&#32;i++&#32;)&#32;{
+23 &#32;&#32;&#32;&#32;aux&#32;=&#32;p[i];
+24 &#32;&#32;&#32;&#32;p[i]&#32;=&#32;p[n-i-1];
+25 &#32;&#32;&#32;&#32;p[n-i-1]&#32;=&#32;aux;
+26 &#32;&#32;}
+27 &#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;p;
+28 }&#32;<emphasis role="comment">//&#32;()</emphasis>
+29 
+30 <emphasis role="comment">//&#32;----------------------------------------------------</emphasis>
+31 <emphasis role="comment">//&#32;----------------------------------------------------</emphasis>
+32 uint8_t&#32;*&#32;<link linkend="__servicio_en_emisora_8h_1a4493ee26019e14ff5945192a58d5da3a">stringAUint8AlReves</link>(&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;pString,&#32;uint8_t&#32;*&#32;pUint,&#32;<emphasis role="keywordtype">int</emphasis>&#32;tamMax&#32;)&#32;{
+33 
+34 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;longitudString&#32;=&#32;&#32;strlen(&#32;pString&#32;);
+35 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;longitudCopiar&#32;=&#32;(&#32;longitudString&#32;&gt;&#32;tamMax&#32;?&#32;tamMax&#32;:&#32;longitudString&#32;);
+36 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;copio&#32;nombreServicio&#32;-&gt;&#32;uuidServicio&#32;pero&#32;al&#32;revés</emphasis>
+37 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(&#32;<emphasis role="keywordtype">int</emphasis>&#32;i=0;&#32;i&lt;=longitudCopiar-1;&#32;i++&#32;)&#32;{
+38 &#32;&#32;&#32;&#32;&#32;&#32;pUint[&#32;tamMax-i-1&#32;]&#32;=&#32;pString[&#32;i&#32;];
+39 &#32;&#32;&#32;&#32;}&#32;<emphasis role="comment">//&#32;for</emphasis>
+40 
+41 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;pUint;
+42 }&#32;<emphasis role="comment">//&#32;()</emphasis>
+43 
+44 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+45 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+46 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_servicio_en_emisora">ServicioEnEmisora</link>&#32;{
+47 
+48 <emphasis role="keyword">public</emphasis>:
+49 
+50 
+51 &#32;&#32;<emphasis role="comment">//&#32;--------------------------------------------------------</emphasis>
+52 &#32;&#32;<emphasis role="comment">//&#32;--------------------------------------------------------</emphasis>
+53 
+54 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+55 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+56 &#32;&#32;<emphasis role="keyword">using&#32;</emphasis><link linkend="_class_servicio_en_emisora_1afb9fef1029d1afd6368128a400efdc50">CallbackCaracteristicaEscrita</link>&#32;=&#32;void&#32;(&#32;uint16_t&#32;conn_handle,
+57 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;BLECharacteristic&#32;*&#32;chr,
+58 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;*&#32;data,&#32;uint16_t&#32;len);&#32;
+59 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+60 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+61 &#32;&#32;<emphasis role="keyword">class&#32;</emphasis><link linkend="_class_servicio_en_emisora_1_1_caracteristica">Caracteristica</link>&#32;{
+62 &#32;&#32;<emphasis role="keyword">private</emphasis>:
+63 &#32;&#32;&#32;&#32;uint8_t&#32;uuidCaracteristica[16]&#32;=&#32;{&#32;<emphasis role="comment">//&#32;el&#32;uuid&#32;se&#32;copia&#32;aquí&#32;(al&#32;revés)&#32;a&#32;partir&#32;de&#32;un&#32;string-c</emphasis>
+64 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;least&#32;signficant&#32;byte,&#32;el&#32;primero</emphasis>
+65 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;0&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;1&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;2&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;3&apos;</emphasis>,&#32;
+66 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;4&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;5&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;6&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;7&apos;</emphasis>,&#32;
+67 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;8&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;9&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;B&apos;</emphasis>,&#32;
+68 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;C&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;D&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;E&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;F&apos;</emphasis>
+69 &#32;&#32;&#32;&#32;};
+70 
+71 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;</emphasis>
+72 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;</emphasis>
+73 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;</emphasis>
+74 &#32;&#32;&#32;&#32;BLECharacteristic&#32;laCaracteristica;
+75 
+76 &#32;&#32;<emphasis role="keyword">public</emphasis>:
+77 
+78 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+79 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+80 &#32;&#32;&#32;&#32;<link linkend="_class_servicio_en_emisora_1_1_caracteristica_1a639f47133a8406e84aa237c123fd2e63">Caracteristica</link>(&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;nombreCaracteristica_&#32;)
+81 &#32;&#32;&#32;&#32;&#32;&#32;:
+82 &#32;&#32;&#32;&#32;&#32;&#32;laCaracteristica(&#32;<link linkend="__servicio_en_emisora_8h_1a4493ee26019e14ff5945192a58d5da3a">stringAUint8AlReves</link>(&#32;nombreCaracteristica_,&#32;&amp;uuidCaracteristica[0],&#32;16&#32;)&#32;)
+83 &#32;&#32;&#32;&#32;{
+84 &#32;&#32;&#32;&#32;&#32;&#32;
+85 &#32;&#32;&#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+86 
+87 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+88 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+89 &#32;&#32;&#32;&#32;<link linkend="_class_servicio_en_emisora_1_1_caracteristica_1a646c15ae6b57fc25d144d2e2ed160c0c">Caracteristica</link>(&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;nombreCaracteristica_&#32;,<emphasis role="comment">//PERO&#32;PORQUE&#32;COÑO&#32;LO&#32;HACES&#32;ASII&#32;GILIPOLLAS</emphasis>
+90 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;props,
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SecureMode_t&#32;permisoRead,
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SecureMode_t&#32;permisoWrite,&#32;
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;tam&#32;)&#32;
+94 &#32;&#32;&#32;&#32;&#32;&#32;:
+95 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_servicio_en_emisora_1_1_caracteristica">Caracteristica</link>(&#32;nombreCaracteristica_&#32;)&#32;<emphasis role="comment">//&#32;llamada&#32;al&#32;otro&#32;constructor</emphasis>
+96 &#32;&#32;&#32;&#32;{
+97 &#32;&#32;&#32;&#32;&#32;&#32;(*this).<link linkend="_class_servicio_en_emisora_1_1_caracteristica_1a7fe53370615887c50304300457c1114c">asignarPropiedadesPermisosYTamanyoDatos</link>(&#32;props,&#32;permisoRead,&#32;permisoWrite,&#32;tam&#32;);<emphasis role="comment">//NOOO&#32;LOO&#32;ENTIENDOOOOOOOOO</emphasis>
+98 &#32;&#32;&#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+99 
+100 &#32;&#32;<emphasis role="keyword">private</emphasis>:
+101 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+102 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;CHR_PROPS_WRITE&#32;,&#32;CHR_PROPS_READ&#32;,&#32;&#32;CHR_PROPS_NOTIFY&#32;</emphasis>
+103 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+104 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;asignarPropiedades&#32;(&#32;uint8_t&#32;props&#32;)&#32;{
+105 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;no&#32;puedo&#32;escribir&#32;AUN&#32;si&#32;el&#32;constructor&#32;llama&#32;a&#32;esto:&#32;Serial.println(&#32;&quot;&#32;laCaracteristica.setProperties(&#32;props&#32;);&#32;&quot;);</emphasis>
+106 &#32;&#32;&#32;&#32;&#32;&#32;(*this).laCaracteristica.setProperties(&#32;props&#32;);
+107 &#32;&#32;&#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+108 
+109 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+110 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;SecureMode_t::SECMODE_OPEN&#32;&#32;,&#32;SecureMode_t::SECMODE_NO_ACCESS</emphasis>
+111 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+112 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;asignarPermisos(&#32;SecureMode_t&#32;permisoRead,&#32;SecureMode_t&#32;permisoWrite&#32;)&#32;{
+113 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;no&#32;puedo&#32;escribir&#32;AUN&#32;si&#32;el&#32;constructor&#32;llama&#32;a&#32;esto:&#32;Serial.println(&#32;&quot;laCaracteristica.setPermission(&#32;permisoRead,&#32;permisoWrite&#32;);&#32;&quot;&#32;);</emphasis>
+114 &#32;&#32;&#32;&#32;&#32;&#32;(*this).laCaracteristica.setPermission(&#32;permisoRead,&#32;permisoWrite&#32;);
+115 &#32;&#32;&#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+116 
+117 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+118 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+119 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;asignarTamanyoDatos(&#32;uint8_t&#32;tam&#32;)&#32;{
+120 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;no&#32;puedo&#32;escribir&#32;AUN&#32;si&#32;el&#32;constructor&#32;llama&#32;a&#32;esto:&#32;Serial.print(&#32;&quot;&#32;(*this).laCaracteristica.setFixedLen(&#32;tam&#32;=&#32;&quot;&#32;);</emphasis>
+121 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;no&#32;puedo&#32;escribir&#32;AUN&#32;si&#32;el&#32;constructor&#32;llama&#32;a&#32;esto:&#32;Serial.println(&#32;tam&#32;);</emphasis>
+122 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;(*this).laCaracteristica.setFixedLen(&#32;tam&#32;);</emphasis>
+123 &#32;&#32;&#32;&#32;&#32;&#32;(*this).laCaracteristica.setMaxLen(&#32;tam&#32;);
+124 &#32;&#32;&#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+125 
+126 &#32;&#32;<emphasis role="keyword">public</emphasis>:
+127 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+128 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+129 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_servicio_en_emisora_1_1_caracteristica_1a7fe53370615887c50304300457c1114c">asignarPropiedadesPermisosYTamanyoDatos</link>(&#32;uint8_t&#32;props,
+130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SecureMode_t&#32;permisoRead,
+131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;SecureMode_t&#32;permisoWrite,&#32;
+132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;tam&#32;)&#32;{
+133 &#32;&#32;&#32;&#32;&#32;&#32;asignarPropiedades(&#32;props&#32;);
+134 &#32;&#32;&#32;&#32;&#32;&#32;asignarPermisos(&#32;permisoRead,&#32;permisoWrite&#32;);
+135 &#32;&#32;&#32;&#32;&#32;&#32;asignarTamanyoDatos(&#32;tam&#32;);
+136 &#32;&#32;&#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+138 
+139 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+140 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+141 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_class_servicio_en_emisora_1_1_caracteristica_1ac6642d92b4f2d80ee6c21081972987d7">escribirDatos</link>(&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;str&#32;)&#32;{
+142 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Serial.print(&#32;&quot;&#32;return&#32;(*this).laCaracteristica.write(&#32;str&#32;&#32;=&#32;&quot;&#32;);</emphasis>
+143 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Serial.println(&#32;str&#32;);</emphasis>
+144 
+145 &#32;&#32;&#32;&#32;&#32;&#32;uint16_t&#32;r&#32;=&#32;(*this).laCaracteristica.write(&#32;str&#32;);
+146 
+147 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Serial.print(&#32;&quot;&gt;&gt;&gt;Escritos&#32;&quot;&#32;);&#32;Serial.print(&#32;r&#32;);&#32;Serial.println(&#32;&quot;&#32;bytes&#32;con&#32;write()&#32;&quot;&#32;);</emphasis>
+148 
+149 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;r;
+150 &#32;&#32;&#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+151 
+152 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+153 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+154 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_class_servicio_en_emisora_1_1_caracteristica_1ae3369332d51fb6e70a300b54c3a4f95d">notificarDatos</link>(&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;str&#32;)&#32;{
+155 &#32;&#32;&#32;&#32;&#32;&#32;
+156 &#32;&#32;&#32;&#32;&#32;&#32;uint16_t&#32;r&#32;=&#32;laCaracteristica.notify(&#32;&amp;str[0]&#32;);
+157 
+158 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;r;
+159 &#32;&#32;&#32;&#32;}&#32;<emphasis role="comment">//&#32;&#32;()</emphasis>
+160 
+161 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+162 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+163 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_servicio_en_emisora_1_1_caracteristica_1ac3355c1918c2eddf58d34df1b30dd60d">instalarCallbackCaracteristicaEscrita</link>(&#32;<link linkend="_class_servicio_en_emisora_1afb9fef1029d1afd6368128a400efdc50">CallbackCaracteristicaEscrita</link>&#32;cb&#32;)&#32;{
+164 &#32;&#32;&#32;&#32;&#32;&#32;(*this).laCaracteristica.setWriteCallback(&#32;cb&#32;);
+165 &#32;&#32;&#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+166 
+167 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+168 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+169 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_servicio_en_emisora_1_1_caracteristica_1ad93e0c5998aeb15c920cd5d6db7a0e3b">activar</link>()&#32;{
+170 &#32;&#32;&#32;&#32;&#32;&#32;err_t&#32;error&#32;=&#32;(*this).laCaracteristica.begin();
+171 &#32;&#32;&#32;&#32;&#32;&#32;Globales::elPuerto.escribir(&#32;&#32;<emphasis role="stringliteral">&quot;&#32;(*this).laCaracteristica.begin();&#32;error&#32;=&#32;&quot;</emphasis>&#32;);
+172 &#32;&#32;&#32;&#32;&#32;&#32;Globales::elPuerto.escribir(&#32;&#32;error&#32;);
+173 &#32;&#32;&#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+174 
+175 &#32;&#32;};&#32;<emphasis role="comment">//&#32;class&#32;Caracteristica</emphasis>
+176 &#32;&#32;
+177 &#32;&#32;<emphasis role="comment">//&#32;--------------------------------------------------------</emphasis>
+178 &#32;&#32;<emphasis role="comment">//&#32;--------------------------------------------------------</emphasis>
+179 <emphasis role="keyword">private</emphasis>:
+180 &#32;&#32;
+181 &#32;&#32;uint8_t&#32;uuidServicio[16]&#32;=&#32;{&#32;<emphasis role="comment">//&#32;el&#32;uuid&#32;se&#32;copia&#32;aquí&#32;(al&#32;revés)&#32;a&#32;partir&#32;de&#32;un&#32;string-c</emphasis>
+182 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;least&#32;signficant&#32;byte,&#32;el&#32;primero</emphasis>
+183 &#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;0&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;1&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;2&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;3&apos;</emphasis>,&#32;
+184 &#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;4&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;5&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;6&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;7&apos;</emphasis>,&#32;
+185 &#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;8&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;9&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;B&apos;</emphasis>,&#32;
+186 &#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;C&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;D&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;E&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;F&apos;</emphasis>
+187 &#32;&#32;};
+188 
+189 &#32;&#32;<emphasis role="comment">//</emphasis>
+190 &#32;&#32;<emphasis role="comment">//</emphasis>
+191 &#32;&#32;<emphasis role="comment">//</emphasis>
+192 &#32;&#32;BLEService&#32;elServicio;
+193 
+194 &#32;&#32;<emphasis role="comment">//</emphasis>
+195 &#32;&#32;<emphasis role="comment">//</emphasis>
+196 &#32;&#32;<emphasis role="comment">//</emphasis>
+197 &#32;&#32;std::vector&lt;&#32;Caracteristica&#32;*&#32;&gt;&#32;lasCaracteristicas;
+198 
+199 <emphasis role="keyword">public</emphasis>:
+200 &#32;&#32;
+201 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+202 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+203 &#32;&#32;<link linkend="_class_servicio_en_emisora_1a17d9dcafb552b3e76bc7ff2e6fb238f2">ServicioEnEmisora</link>(&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;nombreServicio_&#32;)
+204 &#32;&#32;&#32;&#32;:
+205 &#32;&#32;&#32;&#32;elServicio(&#32;<link linkend="__servicio_en_emisora_8h_1a4493ee26019e14ff5945192a58d5da3a">stringAUint8AlReves</link>(&#32;nombreServicio_,&#32;&amp;uuidServicio[0],&#32;16&#32;)&#32;)
+206 &#32;&#32;{
+207 &#32;&#32;&#32;&#32;
+208 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+209 &#32;&#32;
+210 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+211 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+212 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_servicio_en_emisora_1a59267e82dca13b83913e578efacce794">escribeUUID</link>()&#32;{
+213 &#32;&#32;&#32;&#32;Serial.println&#32;(&#32;<emphasis role="stringliteral">&quot;**********&quot;</emphasis>&#32;);
+214 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i=0;&#32;i&lt;=&#32;15;&#32;i++)&#32;{
+215 &#32;&#32;&#32;&#32;&#32;&#32;Serial.print(&#32;(<emphasis role="keywordtype">char</emphasis>)&#32;uuidServicio[i]&#32;);
+216 &#32;&#32;&#32;&#32;}
+217 &#32;&#32;&#32;&#32;Serial.println&#32;(&#32;<emphasis role="stringliteral">&quot;\n**********&quot;</emphasis>&#32;);
+218 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+219 
+220 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+221 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+222 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_servicio_en_emisora_1af25a77d5c2b3edfe5c99fc9fa00729bf">anyadirCaracteristica</link>(&#32;<link linkend="_class_servicio_en_emisora_1_1_caracteristica">Caracteristica</link>&#32;&amp;&#32;car&#32;)&#32;{
+223 &#32;&#32;&#32;&#32;(*this).lasCaracteristicas.push_back(&#32;&amp;&#32;car&#32;);
+224 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+225 
+226 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+227 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+228 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_servicio_en_emisora_1a387f170420610e1ba1fe71b471c1ca23">activarServicio</link>(&#32;)&#32;{
+229 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;entiendo&#32;que&#32;al&#32;llegar&#32;aquí&#32;ya&#32;ha&#32;sido&#32;configurado</emphasis>
+230 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;todo:&#32;características&#32;y&#32;servicio</emphasis>
+231 
+232 &#32;&#32;&#32;&#32;err_t&#32;error&#32;=&#32;(*this).elServicio.begin();
+233 &#32;&#32;&#32;&#32;Serial.print(&#32;<emphasis role="stringliteral">&quot;&#32;(*this).elServicio.begin();&#32;error&#32;=&#32;&quot;</emphasis>&#32;);
+234 &#32;&#32;&#32;&#32;Serial.println(&#32;error&#32;);
+235 
+236 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(&#32;<emphasis role="keyword">auto</emphasis>&#32;pCar&#32;:&#32;(*this).lasCaracteristicas&#32;)&#32;{
+237 &#32;&#32;&#32;&#32;&#32;&#32;(*pCar).activar();
+238 &#32;&#32;&#32;&#32;}&#32;<emphasis role="comment">//&#32;for</emphasis>
+239 
+240 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+241 
+242 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+243 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+244 &#32;&#32;<emphasis role="keyword">operator</emphasis>&#32;BLEService&amp;()&#32;{
+245 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;&quot;conversión&#32;de&#32;tipo&quot;:&#32;si&#32;pongo&#32;esta&#32;clase&#32;en&#32;un&#32;sitio&#32;donde&#32;necesitan&#32;un&#32;BLEService</emphasis>
+246 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;elServicio;
+247 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+248 &#32;&#32;&#32;&#32;
+249 };&#32;<emphasis role="comment">//&#32;class</emphasis>
+250 
+251 <emphasis role="preprocessor">#endif</emphasis>
+252 
+253 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+254 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+255 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+256 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+</programlisting></section>

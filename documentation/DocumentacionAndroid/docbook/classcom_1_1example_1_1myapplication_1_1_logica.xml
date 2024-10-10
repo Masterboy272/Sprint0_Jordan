@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcom_1_1example_1_1myapplication_1_1_logica" xml:lang="en-US">
+<title>com.example.myapplication.Logica Class Reference</title>
+<indexterm><primary>com.example.myapplication.Logica</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classcom_1_1example_1_1myapplication_1_1_logica_1aa34be89f72ef9e048d92f88939ff992f">guardarMedicion</link> (<link linkend="_classcom_1_1example_1_1myapplication_1_1_medidas">Medidas</link> medicion)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_logica_1aa34be89f72ef9e048d92f88939ff992f"/><section>
+    <title>guardarMedicion()</title>
+<indexterm><primary>guardarMedicion</primary><secondary>com.example.myapplication.Logica</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.Logica</primary><secondary>guardarMedicion</secondary></indexterm>
+<para><computeroutput>void com.example.myapplication.Logica.guardarMedicion (<link linkend="_classcom_1_1example_1_1myapplication_1_1_medidas">Medidas</link> medicion)</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/stips/Desktop/Sprint0_Tallal - copia/MyApplication/app/src/main/java/com/example/myapplication/<link linkend="__logica_8java">Logica.java</link></section>
+</section>

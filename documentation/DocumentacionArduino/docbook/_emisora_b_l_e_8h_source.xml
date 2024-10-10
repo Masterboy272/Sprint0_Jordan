@@ -1,0 +1,345 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__emisora_b_l_e_8h_source" xml:lang="en-US">
+<title>EmisoraBLE.h</title>
+<indexterm><primary>C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/EmisoraBLE.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;-*-&#32;mode:&#32;c++&#32;-*-</emphasis>
+2 
+3 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+4 <emphasis role="comment">//&#32;Jordi&#32;Bataller&#32;i&#32;Mascarell</emphasis>
+5 <emphasis role="comment">//&#32;2019-07-07</emphasis>
+6 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+7 <emphasis role="preprocessor">#ifndef&#32;EMISORA_H_INCLUIDO</emphasis>
+8 <emphasis role="preprocessor">#define&#32;EMISORA_H_INCLUIDO</emphasis>
+9 
+10 <emphasis role="comment">//&#32;Buena&#32;introducción:&#32;https://learn.adafruit.com/introduction-to-bluetooth-low-energy/gap</emphasis>
+11 <emphasis role="comment">//&#32;https://os.mbed.com/blog/entry/BLE-Beacons-URIBeacon-AltBeacons-iBeacon/</emphasis>
+12 
+13 <emphasis role="comment">//&#32;fuente:&#32;https://www.instructables.com/id/Beaconeddystone-and-Adafruit-NRF52-Advertise-Your-/</emphasis>
+14 <emphasis role="comment">//&#32;https://github.com/nkolban/ESP32_BLE_Arduino/blob/master/src/BLEBeacon.h</emphasis>
+15 
+16 <emphasis role="comment">//&#32;https://os.mbed.com/blog/entry/BLE-Beacons-URIBeacon-AltBeacons-iBeacon/</emphasis>
+17 <emphasis role="comment">//&#32;https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/bleadvertising</emphasis>
+18 
+19 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+20 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+21 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__servicio_en_emisora_8h">ServicioEnEmisora.h</link>&quot;</emphasis>
+22 
+23 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+24 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+25 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_emisora_b_l_e">EmisoraBLE</link>&#32;{
+26 <emphasis role="keyword">private</emphasis>:
+27 
+28 &#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;nombreEmisora;
+29 &#32;&#32;<emphasis role="keyword">const</emphasis>&#32;uint16_t&#32;fabricanteID;
+30 &#32;&#32;<emphasis role="keyword">const</emphasis>&#32;int8_t&#32;txPower;
+31 
+32 <emphasis role="keyword">public</emphasis>:
+33 
+34 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+35 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+36 &#32;&#32;<emphasis role="keyword">using&#32;</emphasis><link linkend="_class_emisora_b_l_e_1a922f7f1ab1063eb40c99e4a3676be258">CallbackConexionEstablecida</link>&#32;=&#32;void&#32;(&#32;uint16_t&#32;connHandle&#32;);
+37 &#32;&#32;<emphasis role="keyword">using&#32;</emphasis><link linkend="_class_emisora_b_l_e_1afd6faaf6a924a50ea027046703300b0b">CallbackConexionTerminada</link>&#32;=&#32;void&#32;(&#32;uint16_t&#32;connHandle,&#32;uint8_t&#32;reason);
+38 
+39 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+40 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+41 &#32;&#32;<link linkend="_class_emisora_b_l_e_1ae2e94b95bde4cddf0038deb0368cc5bf">EmisoraBLE</link>(&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;nombreEmisora_,&#32;<emphasis role="keyword">const</emphasis>&#32;uint16_t&#32;fabricanteID_,
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;int8_t&#32;txPower_&#32;)&#32;
+43 &#32;&#32;&#32;&#32;:
+44 &#32;&#32;&#32;&#32;nombreEmisora(&#32;nombreEmisora_&#32;)&#32;,
+45 &#32;&#32;&#32;&#32;fabricanteID(&#32;fabricanteID_&#32;)&#32;,
+46 &#32;&#32;&#32;&#32;txPower(&#32;txPower_&#32;)
+47 &#32;&#32;{
+48 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;no&#32;encender&#32;ahora&#32;la&#32;emisora,&#32;tal&#32;vez&#32;sea&#32;por&#32;el&#32;println()</emphasis>
+49 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;que&#32;hace&#32;que&#32;todo&#32;falle&#32;si&#32;lo&#32;llamo&#32;en&#32;el&#32;contructor</emphasis>
+50 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;(&#32;=&#32;antes&#32;que&#32;configuremos&#32;Serial&#32;)</emphasis>
+51 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;No&#32;parece&#32;que&#32;sea&#32;por&#32;el&#32;println,</emphasis>
+52 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;por&#32;tanto&#32;NO_encenderEmisora();</emphasis>
+53 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+54 
+55 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+56 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+57 &#32;&#32;<emphasis role="comment">/*&#32;creo&#32;que&#32;no&#32;me&#32;sirve&#32;esta&#32;versión&#32;porque&#32;parece</emphasis>
+58 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;que&#32;no&#32;se&#32;instalen&#32;los&#32;callbacks&#32;si&#32;la&#32;emisora&#32;no&#32;está&#32;encendida,</emphasis>
+59 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;pero&#32;no&#32;la&#32;puedo&#32;encender&#32;en&#32;el&#32;constructor&#32;</emphasis>
+60 <emphasis role="comment">&#32;&#32;EmisoraBLE(&#32;const&#32;char&#32;*&#32;nombreEmisora_,&#32;const&#32;uint16_t&#32;fabricanteID_,</emphasis>
+61 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;const&#32;int8_t&#32;txPower_,</emphasis>
+62 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallbackConexionEstablecida&#32;cbce,</emphasis>
+63 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CallbackConexionTerminada&#32;cbct</emphasis>
+64 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;)&#32;</emphasis>
+65 <emphasis role="comment">&#32;&#32;&#32;&#32;:</emphasis>
+66 <emphasis role="comment">&#32;&#32;&#32;&#32;EmisoraBLE&#32;(&#32;nombreEmisora_,&#32;fabricanteID_,&#32;txPower_&#32;)</emphasis>
+67 <emphasis role="comment">&#32;&#32;{</emphasis>
+68 <emphasis role="comment">&#32;&#32;&#32;&#32;instalarCallbackConexionEstablecida(&#32;cbce&#32;);</emphasis>
+69 <emphasis role="comment">&#32;&#32;&#32;&#32;instalarCallbackConexionTerminada(&#32;cbct&#32;);</emphasis>
+70 <emphasis role="comment">&#32;&#32;}&#32;//&#32;()</emphasis>
+71 <emphasis role="comment">&#32;&#32;*/</emphasis>
+72 &#32;&#32;&#32;&#32;
+73 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+74 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+75 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_emisora_b_l_e_1a31f9c768b91b9e353f693f509af3ea73">encenderEmisora</link>()&#32;{
+76 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Serial.println&#32;(&#32;&quot;Bluefruit.begin()&#32;&quot;&#32;);</emphasis>
+77 &#32;&#32;&#32;&#32;&#32;Bluefruit.begin();&#32;
+78 
+79 &#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;por&#32;si&#32;acaso:</emphasis>
+80 &#32;&#32;&#32;&#32;&#32;(*this).detenerAnuncio();
+81 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+82 
+83 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+84 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+85 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_emisora_b_l_e_1ada243f2f1185a7d66ea33de6bdb06590">encenderEmisora</link>(&#32;<link linkend="_class_emisora_b_l_e_1a922f7f1ab1063eb40c99e4a3676be258">CallbackConexionEstablecida</link>&#32;cbce,
+86 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_emisora_b_l_e_1afd6faaf6a924a50ea027046703300b0b">CallbackConexionTerminada</link>&#32;cbct&#32;)&#32;{
+87 
+88 &#32;&#32;&#32;&#32;<link linkend="_class_emisora_b_l_e_1a31f9c768b91b9e353f693f509af3ea73">encenderEmisora</link>();
+89 
+90 &#32;&#32;&#32;&#32;<link linkend="_class_emisora_b_l_e_1ae15e223776af83a8cac07564c168d0b9">instalarCallbackConexionEstablecida</link>(&#32;cbce&#32;);
+91 &#32;&#32;&#32;&#32;<link linkend="_class_emisora_b_l_e_1a2bb6b319046a10641619c1388f7fe351">instalarCallbackConexionTerminada</link>(&#32;cbct&#32;);
+92 
+93 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+94 
+95 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+96 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+97 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_emisora_b_l_e_1aeede390b7a6502baecb48e9db77120b4">detenerAnuncio</link>()&#32;{
+98 
+99 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(&#32;(*this).estaAnunciando()&#32;)&#32;{
+100 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Serial.println&#32;(&#32;&quot;Bluefruit.Advertising.stop()&#32;&quot;&#32;);</emphasis>
+101 &#32;&#32;&#32;&#32;&#32;&#32;Bluefruit.Advertising.stop();&#32;
+102 &#32;&#32;&#32;&#32;}
+103 
+104 &#32;&#32;}&#32;&#32;<emphasis role="comment">//&#32;()</emphasis>
+105 &#32;&#32;
+106 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+107 &#32;&#32;<emphasis role="comment">//&#32;estaAnunciando()&#32;-&gt;&#32;Boleano</emphasis>
+108 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+109 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_emisora_b_l_e_1ac32548698cf69ecef9e96941fc2e1b94">estaAnunciando</link>()&#32;{
+110 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;Bluefruit.Advertising.isRunning();
+111 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+112 
+113 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+114 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+115 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_emisora_b_l_e_1aff23b85351177e685353b1ee92a1558f">emitirAnuncioIBeacon</link>(&#32;uint8_t&#32;*&#32;beaconUUID,&#32;int16_t&#32;major,&#32;int16_t&#32;minor,&#32;uint8_t&#32;rssi&#32;)&#32;{
+116 
+117 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+118 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+119 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+120 &#32;&#32;&#32;&#32;(*this).detenerAnuncio();
+121 &#32;&#32;&#32;&#32;
+122 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+123 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;creo&#32;el&#32;beacon&#32;</emphasis>
+124 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+125 &#32;&#32;&#32;&#32;BLEBeacon&#32;elBeacon(&#32;beaconUUID,&#32;major,&#32;minor,&#32;rssi&#32;);
+126 &#32;&#32;&#32;&#32;elBeacon.setManufacturer(&#32;(*this).fabricanteID&#32;);
+127 
+128 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+129 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;parece&#32;que&#32;esto&#32;debe&#32;ponerse&#32;todo&#32;aquí</emphasis>
+130 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+131 
+132 &#32;&#32;&#32;&#32;Bluefruit.setTxPower(&#32;(*this).txPower&#32;);
+133 &#32;&#32;&#32;&#32;Bluefruit.setName(&#32;(*this).nombreEmisora&#32;);
+134 &#32;&#32;&#32;&#32;Bluefruit.ScanResponse.addName();&#32;<emphasis role="comment">//&#32;para&#32;que&#32;envíe&#32;el&#32;nombre&#32;de&#32;emisora&#32;(?!)</emphasis>
+135 
+136 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+137 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;pongo&#32;el&#32;beacon</emphasis>
+138 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+139 &#32;&#32;&#32;&#32;Bluefruit.Advertising.setBeacon(&#32;elBeacon&#32;);
+140 
+141 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+142 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;?&#32;qué&#32;valorers&#32;poner&#32;aquí</emphasis>
+143 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+144 &#32;&#32;&#32;&#32;Bluefruit.Advertising.restartOnDisconnect(<emphasis role="keyword">true</emphasis>);&#32;<emphasis role="comment">//&#32;no&#32;hace&#32;falta,&#32;pero&#32;lo&#32;pongo</emphasis>
+145 &#32;&#32;&#32;&#32;Bluefruit.Advertising.setInterval(100,&#32;100);&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;in&#32;unit&#32;of&#32;0.625&#32;ms</emphasis>
+146 
+147 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+148 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;empieza&#32;el&#32;anuncio,&#32;0&#32;=&#32;tiempo&#32;indefinido&#32;(ya&#32;lo&#32;pararán)</emphasis>
+149 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+150 &#32;&#32;&#32;&#32;Bluefruit.Advertising.start(&#32;0&#32;);&#32;
+151 &#32;&#32;&#32;&#32;
+152 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+153 
+154 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+155 &#32;&#32;<emphasis role="comment">//</emphasis>
+156 &#32;&#32;<emphasis role="comment">//&#32;Ejemplo&#32;de&#32;Beacon&#32;(31&#32;bytes)</emphasis>
+157 &#32;&#32;<emphasis role="comment">//</emphasis>
+158 &#32;&#32;<emphasis role="comment">//&#32;https://os.mbed.com/blog/entry/BLE-Beacons-URIBeacon-AltBeacons-iBeacon/</emphasis>
+159 &#32;&#32;<emphasis role="comment">//</emphasis>
+160 &#32;&#32;<emphasis role="comment">//&#32;The&#32;iBeacon&#32;Prefix&#32;contains&#32;the&#32;hex&#32;data&#32;:&#32;0x0201061AFF004C0215.&#32;This&#32;breaks&#32;down&#32;as&#32;follows:</emphasis>
+161 &#32;&#32;<emphasis role="comment">//</emphasis>
+162 &#32;&#32;<emphasis role="comment">//&#32;0x020106&#32;defines&#32;the&#32;advertising&#32;packet&#32;as&#32;BLE&#32;General&#32;Discoverable&#32;and&#32;BR/EDR&#32;high-speed&#32;incompatible.</emphasis>
+163 &#32;&#32;<emphasis role="comment">//&#32;Effectively&#32;it&#32;says&#32;this&#32;is&#32;only&#32;broadcasting,&#32;not&#32;connecting.</emphasis>
+164 &#32;&#32;<emphasis role="comment">//</emphasis>
+165 &#32;&#32;<emphasis role="comment">//&#32;0x1AFF&#32;says&#32;the&#32;following&#32;data&#32;is&#32;26&#32;bytes&#32;long&#32;and&#32;is&#32;Manufacturer&#32;Specific&#32;Data.</emphasis>
+166 &#32;&#32;<emphasis role="comment">//</emphasis>
+167 &#32;&#32;<emphasis role="comment">//&#32;0x004C&#32;is&#32;Apple’s&#32;Bluetooth&#32;Sig&#32;ID&#32;and&#32;is&#32;the&#32;part&#32;of&#32;this&#32;spec&#32;that&#32;makes&#32;it&#32;Apple-dependent.</emphasis>
+168 &#32;&#32;<emphasis role="comment">//</emphasis>
+169 &#32;&#32;<emphasis role="comment">//&#32;0x02&#32;is&#32;a&#32;secondary&#32;ID&#32;that&#32;denotes&#32;a&#32;proximity&#32;beacon,&#32;which&#32;is&#32;used&#32;by&#32;all&#32;iBeacons.</emphasis>
+170 &#32;&#32;<emphasis role="comment">//</emphasis>
+171 &#32;&#32;<emphasis role="comment">//&#32;0x15&#32;defines&#32;the&#32;remaining&#32;length&#32;to&#32;be&#32;21&#32;bytes&#32;(16+2+2+1).</emphasis>
+172 &#32;&#32;<emphasis role="comment">//</emphasis>
+173 &#32;&#32;<emphasis role="comment">//&#32;Por&#32;ejemmplo:</emphasis>
+174 &#32;&#32;<emphasis role="comment">//</emphasis>
+175 &#32;&#32;<emphasis role="comment">//&#32;1.&#32;prefijo:&#32;9bytes</emphasis>
+176 &#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x02,&#32;0x01,&#32;0x06,&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;advFlags&#32;3bytes</emphasis>
+177 &#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x1a,&#32;0xff,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;advHeader&#32;2&#32;(0x1a&#32;=&#32;26&#32;=&#32;25(lenght&#32;de&#32;0x4c&#32;a&#32;0xca)+1)&#32;&#32;&#32;0xFF&#32;-&gt;&#32;BLE_GAP_AD_TYPE_MANUFACTURER_SPECIFIC_DATA</emphasis>
+178 &#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x4c,&#32;0x00,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;companyID&#32;2bytes</emphasis>
+179 &#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x02,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;ibeacon&#32;type&#32;1&#32;byte</emphasis>
+180 &#32;&#32;<emphasis role="comment">//&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x15,&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;//&#32;ibeacon&#32;length&#32;1&#32;byte&#32;(dec=21&#32;lo&#32;que&#32;va&#32;a&#32;continuación:&#32;desde&#32;&#32;la&#32;&apos;f&apos;&#32;hasta&#32;0x01)</emphasis>
+181 &#32;&#32;<emphasis role="comment">//&#32;</emphasis>
+182 &#32;&#32;<emphasis role="comment">//&#32;2.&#32;uuid:&#32;16bytes</emphasis>
+183 &#32;&#32;<emphasis role="comment">//&#32;&apos;f&apos;,&#32;&apos;i&apos;,&#32;&apos;s&apos;,&#32;&apos;t&apos;,&#32;&apos;r&apos;,&#32;&apos;o&apos;,&#32;&apos;f&apos;,&#32;&apos;i&apos;,&#32;&apos;s&apos;,&#32;&apos;t&apos;,&#32;&apos;r&apos;,&#32;&apos;o&apos;,&#32;0xa7,&#32;0x10,&#32;0x96,&#32;0xe0</emphasis>
+184 &#32;&#32;<emphasis role="comment">//&#32;</emphasis>
+185 &#32;&#32;<emphasis role="comment">//&#32;2&#32;major:&#32;2bytes</emphasis>
+186 &#32;&#32;<emphasis role="comment">//&#32;0x04,&#32;0xd2,</emphasis>
+187 &#32;&#32;<emphasis role="comment">//&#32;</emphasis>
+188 &#32;&#32;<emphasis role="comment">//&#32;minor:&#32;2bytes</emphasis>
+189 &#32;&#32;<emphasis role="comment">//&#32;0x10,&#32;0xe1,</emphasis>
+190 &#32;&#32;<emphasis role="comment">//&#32;</emphasis>
+191 &#32;&#32;<emphasis role="comment">//&#32;0xca,&#32;//&#32;tx&#32;power&#32;:&#32;1bytes</emphasis>
+192 &#32;&#32;<emphasis role="comment">//</emphasis>
+193 &#32;&#32;<emphasis role="comment">//&#32;0x01,&#32;//&#32;este&#32;es&#32;el&#32;byte&#32;31&#32;=&#32;BLE_GAP_ADV_SET_DATA_SIZE_MAX,&#32;parece&#32;que&#32;sobra</emphasis>
+194 &#32;&#32;<emphasis role="comment">//</emphasis>
+195 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+196 &#32;&#32;<emphasis role="comment">//&#32;Para&#32;enviar&#32;como&#32;carga&#32;libre&#32;los&#32;últimos&#32;21&#32;bytes&#32;de&#32;un&#32;iBeacon&#32;(lo&#32;que&#32;normalmente&#32;sería&#32;uuid-16&#32;major-2&#32;minor-2&#32;txPower-1)</emphasis>
+197 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+198 &#32;&#32;<emphasis role="comment">/*</emphasis>
+199 <emphasis role="comment">&#32;&#32;void&#32;emitirAnuncioIBeaconLibre(&#32;const&#32;char&#32;*&#32;carga&#32;)&#32;{</emphasis>
+200 <emphasis role="comment"></emphasis>
+201 <emphasis role="comment">&#32;&#32;&#32;&#32;const&#32;uint8_t&#32;tamanyoCarga&#32;=&#32;strlen(&#32;carga&#32;);</emphasis>
+202 <emphasis role="comment">&#32;&#32;*/</emphasis>
+203 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_emisora_b_l_e_1a8439d1e85ec8d630fcd33b01d8987d41">emitirAnuncioIBeaconLibre</link>(&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;*&#32;carga,&#32;<emphasis role="keyword">const</emphasis>&#32;uint8_t&#32;tamanyoCarga&#32;)&#32;{
+204 
+205 &#32;&#32;&#32;&#32;(*this).detenerAnuncio();&#32;
+206 
+207 &#32;&#32;&#32;&#32;Bluefruit.Advertising.clearData();
+208 &#32;&#32;&#32;&#32;Bluefruit.ScanResponse.clearData();&#32;<emphasis role="comment">//&#32;hace&#32;falta?</emphasis>
+209 
+210 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Bluefruit.setTxPower(&#32;(*this).txPower&#32;);&#32;creo&#32;que&#32;no&#32;lo&#32;pongo&#32;porque&#32;es&#32;uno&#32;de&#32;los&#32;bytes&#32;de&#32;la&#32;parte&#32;de&#32;carga&#32;que&#32;utilizo</emphasis>
+211 &#32;&#32;&#32;&#32;Bluefruit.setName(&#32;(*this).nombreEmisora&#32;);
+212 &#32;&#32;&#32;&#32;Bluefruit.ScanResponse.addName();
+213 
+214 &#32;&#32;&#32;&#32;Bluefruit.Advertising.addFlags(BLE_GAP_ADV_FLAGS_LE_ONLY_GENERAL_DISC_MODE);
+215 
+216 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;con&#32;este&#32;parece&#32;que&#32;no&#32;va&#32;&#32;!</emphasis>
+217 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Bluefruit.Advertising.addFlags(BLE_GAP_ADV_FLAG_LE_GENERAL_DISC_MODE);</emphasis>
+218 
+219 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+220 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;hasta&#32;ahora&#32;habrá,&#32;supongo,&#32;ya&#32;puestos&#32;los&#32;5&#32;primeros&#32;bytes.&#32;Efectivamente.</emphasis>
+221 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Falta&#32;poner&#32;4&#32;bytes&#32;fijos&#32;(company&#32;ID,&#32;beacon&#32;type,&#32;longitud)&#32;y&#32;21&#32;de&#32;carga</emphasis>
+222 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+223 &#32;&#32;&#32;&#32;uint8_t&#32;restoPrefijoYCarga[4+21]&#32;=&#32;{
+224 &#32;&#32;&#32;&#32;&#32;&#32;0x4c,&#32;0x00,&#32;<emphasis role="comment">//&#32;companyID&#32;2</emphasis>
+225 &#32;&#32;&#32;&#32;&#32;&#32;0x02,&#32;<emphasis role="comment">//&#32;ibeacon&#32;type&#32;1byte</emphasis>
+226 &#32;&#32;&#32;&#32;&#32;&#32;21,&#32;<emphasis role="comment">//&#32;ibeacon&#32;length&#32;1byte&#32;(dec=21)&#32;&#32;longitud&#32;del&#32;resto&#32;//&#32;0x15&#32;//&#32;ibeacon&#32;length&#32;1byte&#32;(dec=21)&#32;&#32;longitud&#32;del&#32;resto</emphasis>
+227 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;
+228 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;
+229 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;
+230 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;
+231 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;
+232 &#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>
+233 &#32;&#32;&#32;&#32;};
+234 
+235 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+236 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;addData()&#32;hay&#32;que&#32;usarlo&#32;sólo&#32;una&#32;vez.&#32;Por&#32;eso&#32;copio&#32;la&#32;carga</emphasis>
+237 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;en&#32;el&#32;anterior&#32;array,&#32;donde&#32;he&#32;dejado&#32;21&#32;sitios&#32;libres</emphasis>
+238 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+239 &#32;&#32;&#32;&#32;memcpy(&#32;&amp;restoPrefijoYCarga[4],&#32;&amp;carga[0],&#32;(&#32;tamanyoCarga&#32;&gt;&#32;21&#32;?&#32;21&#32;:&#32;tamanyoCarga&#32;)&#32;);&#32;
+240 
+241 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+242 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;copio&#32;la&#32;carga&#32;para&#32;emitir</emphasis>
+243 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+244 &#32;&#32;&#32;&#32;Bluefruit.Advertising.addData(&#32;BLE_GAP_AD_TYPE_MANUFACTURER_SPECIFIC_DATA,
+245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&amp;restoPrefijoYCarga[0],
+246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;4+21&#32;);
+247 
+248 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+249 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;?&#32;qué&#32;valores&#32;poner&#32;aquí&#32;?</emphasis>
+250 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+251 &#32;&#32;&#32;&#32;Bluefruit.Advertising.restartOnDisconnect(<emphasis role="keyword">true</emphasis>);
+252 &#32;&#32;&#32;&#32;Bluefruit.Advertising.setInterval(100,&#32;100);&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;in&#32;unit&#32;of&#32;0.625&#32;ms</emphasis>
+253 
+254 &#32;&#32;&#32;&#32;Bluefruit.Advertising.setFastTimeout(&#32;1&#32;);&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;number&#32;of&#32;seconds&#32;in&#32;fast&#32;mode</emphasis>
+255 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+256 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;empieza&#32;el&#32;anuncio,&#32;0&#32;=&#32;tiempo&#32;indefinido&#32;(ya&#32;lo&#32;pararán)</emphasis>
+257 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+258 &#32;&#32;&#32;&#32;Bluefruit.Advertising.start(&#32;0&#32;);&#32;
+259 
+260 &#32;&#32;&#32;&#32;Globales::elPuerto.escribir(&#32;<emphasis role="stringliteral">&quot;emitiriBeacon&#32;libre&#32;&#32;Bluefruit.Advertising.start(&#32;0&#32;);&#32;&#32;\n&quot;</emphasis>);
+261 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+262 
+263 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+264 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+265 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_emisora_b_l_e_1a0f027a1c447357c5fe79200b36451731">anyadirServicio</link>(&#32;<link linkend="_class_servicio_en_emisora">ServicioEnEmisora</link>&#32;&amp;&#32;servicio&#32;)&#32;{
+266 
+267 &#32;&#32;&#32;&#32;Globales::elPuerto.escribir(&#32;<emphasis role="stringliteral">&quot;&#32;Bluefruit.Advertising.addService(&#32;servicio&#32;);&#32;\n&quot;</emphasis>);
+268 
+269 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;r&#32;=&#32;Bluefruit.Advertising.addService(&#32;servicio&#32;);
+270 
+271 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(&#32;!&#32;r&#32;)&#32;{
+272 &#32;&#32;&#32;&#32;&#32;&#32;Serial.println(&#32;<emphasis role="stringliteral">&quot;&#32;SERVICION&#32;NO&#32;AÑADIDO&#32;\n&quot;</emphasis>);
+273 &#32;&#32;&#32;&#32;}
+274 &#32;&#32;&#32;&#32;
+275 
+276 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;r;
+277 &#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;nota:&#32;uso&#32;conversión&#32;de&#32;tipo&#32;de&#32;servicio&#32;(ServicioEnEmisora)&#32;a&#32;BLEService</emphasis>
+278 &#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;para&#32;addService()</emphasis>
+279 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+280 
+281 &#32;&#32;
+282 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+283 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+284 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_emisora_b_l_e_1a074a16066fc8ae37567a342e3df63bf5">anyadirServicioConSusCaracteristicas</link>(&#32;<link linkend="_class_servicio_en_emisora">ServicioEnEmisora</link>&#32;&amp;&#32;servicio&#32;)&#32;{&#32;
+285 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(*this).anyadirServicio(&#32;servicio&#32;);
+286 &#32;&#32;}&#32;<emphasis role="comment">//&#32;</emphasis>
+287 
+288 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+289 &#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;...&#32;T&gt;
+290 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_emisora_b_l_e_1aa589659b63ae877910eab1b39a93a339">anyadirServicioConSusCaracteristicas</link>(&#32;<link linkend="_class_servicio_en_emisora">ServicioEnEmisora</link>&#32;&amp;&#32;servicio,
+291 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_servicio_en_emisora_1_1_caracteristica">ServicioEnEmisora::Caracteristica</link>&#32;&amp;&#32;caracteristica,
+292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;T&amp;&#32;...&#32;restoCaracteristicas)&#32;{
+293 
+294 &#32;&#32;&#32;&#32;servicio.<link linkend="_class_servicio_en_emisora_1af25a77d5c2b3edfe5c99fc9fa00729bf">anyadirCaracteristica</link>(&#32;caracteristica&#32;);
+295 
+296 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_emisora_b_l_e_1a074a16066fc8ae37567a342e3df63bf5">anyadirServicioConSusCaracteristicas</link>(&#32;servicio,&#32;restoCaracteristicas...&#32;);
+297 &#32;&#32;&#32;&#32;
+298 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+299 
+300 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+301 &#32;&#32;<emphasis role="keyword">template</emphasis>&#32;&lt;<emphasis role="keyword">typename</emphasis>&#32;...&#32;T&gt;
+302 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_emisora_b_l_e_1a0a0673823174ce9ffb96fb1c0dfb11ab">anyadirServicioConSusCaracteristicasYActivar</link>(&#32;<link linkend="_class_servicio_en_emisora">ServicioEnEmisora</link>&#32;&amp;&#32;servicio,
+303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;ServicioEnEmisora::Caracteristica&#32;&amp;&#32;caracteristica,</emphasis>
+304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;T&amp;&#32;...&#32;restoCaracteristicas)&#32;{
+305 
+306 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;r&#32;=&#32;<link linkend="_class_emisora_b_l_e_1a074a16066fc8ae37567a342e3df63bf5">anyadirServicioConSusCaracteristicas</link>(&#32;servicio,&#32;restoCaracteristicas...&#32;);
+307 
+308 &#32;&#32;&#32;&#32;servicio.<link linkend="_class_servicio_en_emisora_1a387f170420610e1ba1fe71b471c1ca23">activarServicio</link>();
+309 
+310 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;r;
+311 &#32;&#32;&#32;&#32;
+312 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+313 
+314 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+315 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+316 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_emisora_b_l_e_1ae15e223776af83a8cac07564c168d0b9">instalarCallbackConexionEstablecida</link>(&#32;<link linkend="_class_emisora_b_l_e_1a922f7f1ab1063eb40c99e4a3676be258">CallbackConexionEstablecida</link>&#32;cb&#32;)&#32;{
+317 &#32;&#32;&#32;&#32;Bluefruit.Periph.setConnectCallback(&#32;cb&#32;);
+318 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+319 
+320 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+321 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+322 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_emisora_b_l_e_1a2bb6b319046a10641619c1388f7fe351">instalarCallbackConexionTerminada</link>(&#32;<link linkend="_class_emisora_b_l_e_1afd6faaf6a924a50ea027046703300b0b">CallbackConexionTerminada</link>&#32;cb&#32;)&#32;{
+323 &#32;&#32;&#32;&#32;Bluefruit.Periph.setDisconnectCallback(&#32;cb&#32;);
+324 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+325 
+326 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+327 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+328 &#32;&#32;BLEConnection&#32;*&#32;<link linkend="_class_emisora_b_l_e_1aa863c5f29e1f0d4dd1ae023b30350960">getConexion</link>(&#32;uint16_t&#32;connHandle&#32;)&#32;{
+329 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;Bluefruit.Connection(&#32;connHandle&#32;);
+330 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+331 
+332 };&#32;<emphasis role="comment">//&#32;class</emphasis>
+333 
+334 <emphasis role="preprocessor">#endif</emphasis>
+335 
+336 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+337 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+338 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+339 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+340 
+</programlisting></section>

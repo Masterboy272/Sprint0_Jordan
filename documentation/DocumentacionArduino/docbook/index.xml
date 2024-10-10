@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>Medio Ambiente</title>
+    </info>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="class_servicio_en_emisora_1_1_caracteristica.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_emisora_b_l_e.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_l_e_d.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_medidor.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_publicador.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_puerto_serie.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_servicio_en_emisora.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="_emisora_b_l_e_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_emisora_b_l_e_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_l_e_d_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_l_e_d_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_medidor_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_medidor_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_publicador_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_publicador_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_puerto_serie_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_puerto_serie_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_servicio_en_emisora_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_servicio_en_emisora_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

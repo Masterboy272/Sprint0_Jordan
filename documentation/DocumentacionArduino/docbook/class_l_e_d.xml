@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_l_e_d" xml:lang="en-US">
+<title>LED Class Reference</title>
+<indexterm><primary>LED</primary></indexterm>
+<para>
+<computeroutput>#include &lt;LED.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_l_e_d_1a027bcd6d546b47fd3ef22685ed1f73e2">LED</link> (int numero)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_l_e_d_1a58660bafc0f4d6016392feabac555812">encender</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_l_e_d_1a7f961959fa7405fec54de6121415db80">apagar</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_l_e_d_1a9b1361dbee5de756d142b1a2c3e685da">alternar</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_l_e_d_1a7431e9efb39a2890f75b4e235b8f617e">brillar</link> (long tiempo)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_l_e_d_1a027bcd6d546b47fd3ef22685ed1f73e2"/><section>
+    <title>LED()</title>
+<indexterm><primary>LED</primary><secondary>LED</secondary></indexterm>
+<indexterm><primary>LED</primary><secondary>LED</secondary></indexterm>
+<para><computeroutput>LED::LED (int numero)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_l_e_d_1a9b1361dbee5de756d142b1a2c3e685da"/><section>
+    <title>alternar()</title>
+<indexterm><primary>alternar</primary><secondary>LED</secondary></indexterm>
+<indexterm><primary>LED</primary><secondary>alternar</secondary></indexterm>
+<para><computeroutput>void LED::alternar ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_l_e_d_1a7f961959fa7405fec54de6121415db80"/><section>
+    <title>apagar()</title>
+<indexterm><primary>apagar</primary><secondary>LED</secondary></indexterm>
+<indexterm><primary>LED</primary><secondary>apagar</secondary></indexterm>
+<para><computeroutput>void LED::apagar ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_l_e_d_1a7431e9efb39a2890f75b4e235b8f617e"/><section>
+    <title>brillar()</title>
+<indexterm><primary>brillar</primary><secondary>LED</secondary></indexterm>
+<indexterm><primary>LED</primary><secondary>brillar</secondary></indexterm>
+<para><computeroutput>void LED::brillar (long tiempo)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_l_e_d_1a58660bafc0f4d6016392feabac555812"/><section>
+    <title>encender()</title>
+<indexterm><primary>encender</primary><secondary>LED</secondary></indexterm>
+<indexterm><primary>LED</primary><secondary>encender</secondary></indexterm>
+<para><computeroutput>void LED::encender ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/<link linkend="__l_e_d_8h">LED.h</link></section>
+</section>

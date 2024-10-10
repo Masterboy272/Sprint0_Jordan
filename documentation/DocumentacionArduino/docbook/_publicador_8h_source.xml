@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__publicador_8h_source" xml:lang="en-US">
+<title>Publicador.h</title>
+<indexterm><primary>C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/Publicador.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+2 <emphasis role="comment">//&#32;-*-&#32;mode:&#32;c++&#32;-*-</emphasis>
+3 
+4 <emphasis role="comment">//&#32;--------------------------------------------------------------</emphasis>
+5 <emphasis role="comment">//&#32;Jordi&#32;Bataller&#32;i&#32;Mascarell</emphasis>
+6 <emphasis role="comment">//&#32;--------------------------------------------------------------</emphasis>
+7 
+8 <emphasis role="preprocessor">#ifndef&#32;PUBLICADOR_H_INCLUIDO</emphasis>
+9 <emphasis role="preprocessor">#define&#32;PUBLICADOR_H_INCLUIDO</emphasis>
+10 
+11 <emphasis role="comment">//&#32;--------------------------------------------------------------</emphasis>
+12 <emphasis role="comment">//&#32;--------------------------------------------------------------</emphasis>
+13 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_publicador">Publicador</link>&#32;{
+14 
+15 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+16 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+17 <emphasis role="keyword">private</emphasis>:
+18 
+19 &#32;&#32;uint8_t&#32;beaconUUID[16]&#32;=&#32;{&#32;
+20 &#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;E&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;P&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;S&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;G&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;G&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;T&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;I&apos;</emphasis>,&#32;
+21 &#32;&#32;&#32;&#32;<emphasis role="charliteral">&apos;T&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;L&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;L&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;L&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;3&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>
+22 &#32;&#32;&#32;&#32;};
+23 
+24 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+25 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+26 <emphasis role="keyword">public</emphasis>:
+27 &#32;&#32;<link linkend="_class_emisora_b_l_e">EmisoraBLE</link>&#32;<link linkend="_class_publicador_1a86ef036c1b64668ac54dfe87b595aec5">laEmisora</link>&#32;{
+28 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;GTI-3A_TALLAL&quot;</emphasis>,&#32;<emphasis role="comment">//&#32;&#32;nombre&#32;emisora</emphasis>
+29 &#32;&#32;&#32;&#32;&#32;&#32;0x004c,&#32;<emphasis role="comment">//&#32;fabricanteID&#32;(Apple)</emphasis>
+30 &#32;&#32;&#32;&#32;&#32;&#32;4&#32;<emphasis role="comment">//&#32;txPower</emphasis>
+31 &#32;&#32;&#32;&#32;&#32;&#32;};
+32 &#32;&#32;
+33 &#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_publicador_1a339fb2ba061a53478572ade00866408c">RSSI</link>&#32;=&#32;-53;&#32;<emphasis role="comment">//&#32;por&#32;poner&#32;algo,&#32;de&#32;momento&#32;no&#32;lo&#32;uso</emphasis>
+34 
+35 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+36 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+37 <emphasis role="keyword">public</emphasis>:
+38 
+39 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+40 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+41 &#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_class_publicador_1a0dbad8398e97eaf1d6ecdd854f286d38">MedicionesID</link>&#32;&#32;{
+42 &#32;&#32;&#32;&#32;<link linkend="_class_publicador_1a0dbad8398e97eaf1d6ecdd854f286d38a32fd7e9cb7b0274a336e9dc35614f638">CO2</link>&#32;=&#32;11,
+43 &#32;&#32;&#32;&#32;<link linkend="_class_publicador_1a0dbad8398e97eaf1d6ecdd854f286d38aba4e4bf52d95cc981259e2a2192e6047">TEMPERATURA</link>&#32;=&#32;12,
+44 &#32;&#32;&#32;&#32;<link linkend="_class_publicador_1a0dbad8398e97eaf1d6ecdd854f286d38ad30d25e445bf4115dfd39ddcdb665ca4">RUIDO</link>&#32;=&#32;13
+45 &#32;&#32;};
+46 
+47 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+48 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+49 &#32;&#32;<link linkend="_class_publicador_1aa6e6635cf76f5be0d84b8e7780156151">Publicador</link>(&#32;)&#32;{
+50 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;ATENCION:&#32;no&#32;hacerlo&#32;aquí.&#32;(*this).laEmisora.encenderEmisora();</emphasis>
+51 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Pondremos&#32;un&#32;método&#32;para&#32;llamarlo&#32;desde&#32;el&#32;setup()&#32;más&#32;tarde</emphasis>
+52 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+53 
+54 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+55 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+56 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_publicador_1a10f309e5dfd232d204c5d2952581fe16">encenderEmisora</link>()&#32;{
+57 &#32;&#32;&#32;&#32;(*this).laEmisora.encenderEmisora();
+58 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+59 
+60 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+61 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+62 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_publicador_1a2ed2009b9cec631024263659be882985">publicarCO2</link>(&#32;int16_t&#32;valorCO2,&#32;uint8_t&#32;contador,
+63 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">long</emphasis>&#32;tiempoEspera&#32;)&#32;{
+64 
+65 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+66 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;1.&#32;empezamos&#32;anuncio</emphasis>
+67 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+68 &#32;&#32;&#32;&#32;uint16_t&#32;major&#32;=&#32;(<link linkend="_class_publicador_1a0dbad8398e97eaf1d6ecdd854f286d38a32fd7e9cb7b0274a336e9dc35614f638">MedicionesID::CO2</link>&#32;&lt;&lt;&#32;8)&#32;+&#32;contador;
+69 &#32;&#32;&#32;&#32;(*this).laEmisora.emitirAnuncioIBeacon(&#32;(*this).beaconUUID,&#32;
+70 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;999,<emphasis role="comment">//mayor</emphasis>
+71 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;valorCO2,&#32;<emphasis role="comment">//&#32;minor</emphasis>
+72 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(*this).RSSI&#32;<emphasis role="comment">//&#32;rssi</emphasis>
+73 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+74 
+75 &#32;&#32;&#32;&#32;<emphasis role="comment">/*</emphasis>
+76 <emphasis role="comment">&#32;&#32;&#32;&#32;Globales::elPuerto.escribir(&#32;&quot;&#32;&#32;&#32;publicarCO2():&#32;valor=&quot;&#32;);</emphasis>
+77 <emphasis role="comment">&#32;&#32;&#32;&#32;Globales::elPuerto.escribir(&#32;valorCO2&#32;);</emphasis>
+78 <emphasis role="comment">&#32;&#32;&#32;&#32;Globales::elPuerto.escribir(&#32;&quot;&#32;&#32;&#32;contador=&quot;&#32;);</emphasis>
+79 <emphasis role="comment">&#32;&#32;&#32;&#32;Globales::elPuerto.escribir(&#32;contador&#32;);</emphasis>
+80 <emphasis role="comment">&#32;&#32;&#32;&#32;Globales::elPuerto.escribir(&#32;&quot;&#32;&#32;&#32;todo=&quot;&#32;&#32;);</emphasis>
+81 <emphasis role="comment">&#32;&#32;&#32;&#32;Globales::elPuerto.escribir(&#32;major&#32;);</emphasis>
+82 <emphasis role="comment">&#32;&#32;&#32;&#32;Globales::elPuerto.escribir(&#32;&quot;\n&quot;&#32;);</emphasis>
+83 <emphasis role="comment">&#32;&#32;&#32;&#32;*/</emphasis>
+84 
+85 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+86 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;2.&#32;esperamos&#32;el&#32;tiempo&#32;que&#32;nos&#32;digan</emphasis>
+87 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+88 &#32;&#32;&#32;&#32;<link linkend="__l_e_d_8h_1a2fb17dd710d89b92e59a349551733fa0">esperar</link>(&#32;tiempoEspera&#32;);
+89 
+90 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+91 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;3.&#32;paramos&#32;anuncio</emphasis>
+92 &#32;&#32;&#32;&#32;<emphasis role="comment">//</emphasis>
+93 &#32;&#32;&#32;&#32;(*this).laEmisora.detenerAnuncio();
+94 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+95 
+96 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+97 &#32;&#32;<emphasis role="comment">//&#32;............................................................</emphasis>
+98 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_publicador_1a674ec7d8321b9792835cd935c6196dec">publicarTemperatura</link>(&#32;int16_t&#32;valorTemperatura,
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint8_t&#32;contador,&#32;<emphasis role="keywordtype">long</emphasis>&#32;tiempoEspera&#32;)&#32;{
+100 
+101 &#32;&#32;&#32;&#32;<emphasis role="comment">//uint16_t&#32;major&#32;=&#32;(MedicionesID::TEMPERATURA&#32;&lt;&lt;&#32;8)&#32;+&#32;contador;</emphasis>
+102 &#32;&#32;&#32;&#32;(*this).laEmisora.emitirAnuncioIBeacon(&#32;(*this).beaconUUID,&#32;
+103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;valorTemperatura,<emphasis role="comment">//major</emphasis>
+104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;999,&#32;<emphasis role="comment">//&#32;minor</emphasis>
+105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(*this).RSSI&#32;<emphasis role="comment">//&#32;rssi</emphasis>
+106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;);
+107 &#32;&#32;&#32;&#32;<link linkend="__l_e_d_8h_1a2fb17dd710d89b92e59a349551733fa0">esperar</link>(&#32;tiempoEspera&#32;);
+108 
+109 &#32;&#32;&#32;&#32;(*this).laEmisora.detenerAnuncio();
+110 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+111 &#32;&#32;&#32;&#32;
+112 };&#32;<emphasis role="comment">//&#32;class</emphasis>
+113 
+114 <emphasis role="comment">//&#32;--------------------------------------------------------------</emphasis>
+115 <emphasis role="comment">//&#32;--------------------------------------------------------------</emphasis>
+116 <emphasis role="comment">//&#32;--------------------------------------------------------------</emphasis>
+117 <emphasis role="comment">//&#32;--------------------------------------------------------------</emphasis>
+118 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_emisora_b_l_e" xml:lang="en-US">
+<title>EmisoraBLE Class Reference</title>
+<indexterm><primary>EmisoraBLE</primary></indexterm>
+<para>
+<computeroutput>#include &lt;EmisoraBLE.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>using <link linkend="_class_emisora_b_l_e_1a922f7f1ab1063eb40c99e4a3676be258">CallbackConexionEstablecida</link> = void(uint16_t connHandle)</para>
+</listitem>
+            <listitem><para>using <link linkend="_class_emisora_b_l_e_1afd6faaf6a924a50ea027046703300b0b">CallbackConexionTerminada</link> = void(uint16_t connHandle, uint8_t reason)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_emisora_b_l_e_1ae2e94b95bde4cddf0038deb0368cc5bf">EmisoraBLE</link> (const char *nombreEmisora_, const uint16_t fabricanteID_, const int8_t txPower_)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_emisora_b_l_e_1a31f9c768b91b9e353f693f509af3ea73">encenderEmisora</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_emisora_b_l_e_1ada243f2f1185a7d66ea33de6bdb06590">encenderEmisora</link> (<link linkend="_class_emisora_b_l_e_1a922f7f1ab1063eb40c99e4a3676be258">CallbackConexionEstablecida</link> cbce, <link linkend="_class_emisora_b_l_e_1afd6faaf6a924a50ea027046703300b0b">CallbackConexionTerminada</link> cbct)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_emisora_b_l_e_1aeede390b7a6502baecb48e9db77120b4">detenerAnuncio</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_emisora_b_l_e_1ac32548698cf69ecef9e96941fc2e1b94">estaAnunciando</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_emisora_b_l_e_1aff23b85351177e685353b1ee92a1558f">emitirAnuncioIBeacon</link> (uint8_t *beaconUUID, int16_t major, int16_t minor, uint8_t rssi)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_emisora_b_l_e_1a8439d1e85ec8d630fcd33b01d8987d41">emitirAnuncioIBeaconLibre</link> (const char *carga, const uint8_t tamanyoCarga)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_emisora_b_l_e_1a0f027a1c447357c5fe79200b36451731">anyadirServicio</link> (<link linkend="_class_servicio_en_emisora">ServicioEnEmisora</link> &amp;servicio)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_emisora_b_l_e_1a074a16066fc8ae37567a342e3df63bf5">anyadirServicioConSusCaracteristicas</link> (<link linkend="_class_servicio_en_emisora">ServicioEnEmisora</link> &amp;servicio)</para>
+</listitem>
+            <listitem><para>template&lt;typename ... T&gt; </para><para>bool <link linkend="_class_emisora_b_l_e_1aa589659b63ae877910eab1b39a93a339">anyadirServicioConSusCaracteristicas</link> (<link linkend="_class_servicio_en_emisora">ServicioEnEmisora</link> &amp;servicio, <link linkend="_class_servicio_en_emisora_1_1_caracteristica">ServicioEnEmisora::Caracteristica</link> &amp;caracteristica, T &amp;... restoCaracteristicas)</para>
+</listitem>
+            <listitem><para>template&lt;typename ... T&gt; </para><para>bool <link linkend="_class_emisora_b_l_e_1a0a0673823174ce9ffb96fb1c0dfb11ab">anyadirServicioConSusCaracteristicasYActivar</link> (<link linkend="_class_servicio_en_emisora">ServicioEnEmisora</link> &amp;servicio, T &amp;... restoCaracteristicas)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_emisora_b_l_e_1ae15e223776af83a8cac07564c168d0b9">instalarCallbackConexionEstablecida</link> (<link linkend="_class_emisora_b_l_e_1a922f7f1ab1063eb40c99e4a3676be258">CallbackConexionEstablecida</link> cb)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_emisora_b_l_e_1a2bb6b319046a10641619c1388f7fe351">instalarCallbackConexionTerminada</link> (<link linkend="_class_emisora_b_l_e_1afd6faaf6a924a50ea027046703300b0b">CallbackConexionTerminada</link> cb)</para>
+</listitem>
+            <listitem><para>BLEConnection * <link linkend="_class_emisora_b_l_e_1aa863c5f29e1f0d4dd1ae023b30350960">getConexion</link> (uint16_t connHandle)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_emisora_b_l_e_1a922f7f1ab1063eb40c99e4a3676be258"/><section>
+    <title>CallbackConexionEstablecida</title>
+<indexterm><primary>CallbackConexionEstablecida</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>CallbackConexionEstablecida</secondary></indexterm>
+<para><computeroutput>using <link linkend="_class_emisora_b_l_e_1a922f7f1ab1063eb40c99e4a3676be258">EmisoraBLE::CallbackConexionEstablecida</link> =  void ( uint16_t connHandle )</computeroutput></para></section>
+<anchor xml:id="_class_emisora_b_l_e_1afd6faaf6a924a50ea027046703300b0b"/><section>
+    <title>CallbackConexionTerminada</title>
+<indexterm><primary>CallbackConexionTerminada</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>CallbackConexionTerminada</secondary></indexterm>
+<para><computeroutput>using <link linkend="_class_emisora_b_l_e_1afd6faaf6a924a50ea027046703300b0b">EmisoraBLE::CallbackConexionTerminada</link> =  void ( uint16_t connHandle, uint8_t reason)</computeroutput></para></section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_emisora_b_l_e_1ae2e94b95bde4cddf0038deb0368cc5bf"/><section>
+    <title>EmisoraBLE()</title>
+<indexterm><primary>EmisoraBLE</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>EmisoraBLE</secondary></indexterm>
+<para><computeroutput>EmisoraBLE::EmisoraBLE (const char * nombreEmisora_, const uint16_t fabricanteID_, const int8_t txPower_)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_emisora_b_l_e_1a0f027a1c447357c5fe79200b36451731"/><section>
+    <title>anyadirServicio()</title>
+<indexterm><primary>anyadirServicio</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>anyadirServicio</secondary></indexterm>
+<para><computeroutput>bool EmisoraBLE::anyadirServicio (<link linkend="_class_servicio_en_emisora">ServicioEnEmisora</link> &amp; servicio)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_emisora_b_l_e_1a074a16066fc8ae37567a342e3df63bf5"/><section>
+    <title>anyadirServicioConSusCaracteristicas()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>anyadirServicioConSusCaracteristicas</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>anyadirServicioConSusCaracteristicas</secondary></indexterm>
+<para><computeroutput>bool EmisoraBLE::anyadirServicioConSusCaracteristicas (<link linkend="_class_servicio_en_emisora">ServicioEnEmisora</link> &amp; servicio)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_emisora_b_l_e_1aa589659b63ae877910eab1b39a93a339"/><section>
+    <title>anyadirServicioConSusCaracteristicas()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>anyadirServicioConSusCaracteristicas</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>anyadirServicioConSusCaracteristicas</secondary></indexterm>
+<computeroutput>template&lt;typename ... T&gt; </computeroutput><para><computeroutput>bool EmisoraBLE::anyadirServicioConSusCaracteristicas (<link linkend="_class_servicio_en_emisora">ServicioEnEmisora</link> &amp; servicio, <link linkend="_class_servicio_en_emisora_1_1_caracteristica">ServicioEnEmisora::Caracteristica</link> &amp; caracteristica, T &amp;... restoCaracteristicas)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_emisora_b_l_e_1a0a0673823174ce9ffb96fb1c0dfb11ab"/><section>
+    <title>anyadirServicioConSusCaracteristicasYActivar()</title>
+<indexterm><primary>anyadirServicioConSusCaracteristicasYActivar</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>anyadirServicioConSusCaracteristicasYActivar</secondary></indexterm>
+<computeroutput>template&lt;typename ... T&gt; </computeroutput><para><computeroutput>bool EmisoraBLE::anyadirServicioConSusCaracteristicasYActivar (<link linkend="_class_servicio_en_emisora">ServicioEnEmisora</link> &amp; servicio, T &amp;... restoCaracteristicas)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_emisora_b_l_e_1aeede390b7a6502baecb48e9db77120b4"/><section>
+    <title>detenerAnuncio()</title>
+<indexterm><primary>detenerAnuncio</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>detenerAnuncio</secondary></indexterm>
+<para><computeroutput>void EmisoraBLE::detenerAnuncio ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_emisora_b_l_e_1aff23b85351177e685353b1ee92a1558f"/><section>
+    <title>emitirAnuncioIBeacon()</title>
+<indexterm><primary>emitirAnuncioIBeacon</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>emitirAnuncioIBeacon</secondary></indexterm>
+<para><computeroutput>void EmisoraBLE::emitirAnuncioIBeacon (uint8_t * beaconUUID, int16_t major, int16_t minor, uint8_t rssi)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_emisora_b_l_e_1a8439d1e85ec8d630fcd33b01d8987d41"/><section>
+    <title>emitirAnuncioIBeaconLibre()</title>
+<indexterm><primary>emitirAnuncioIBeaconLibre</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>emitirAnuncioIBeaconLibre</secondary></indexterm>
+<para><computeroutput>void EmisoraBLE::emitirAnuncioIBeaconLibre (const char * carga, const uint8_t tamanyoCarga)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_emisora_b_l_e_1a31f9c768b91b9e353f693f509af3ea73"/><section>
+    <title>encenderEmisora()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>encenderEmisora</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>encenderEmisora</secondary></indexterm>
+<para><computeroutput>void EmisoraBLE::encenderEmisora ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_emisora_b_l_e_1ada243f2f1185a7d66ea33de6bdb06590"/><section>
+    <title>encenderEmisora()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>encenderEmisora</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>encenderEmisora</secondary></indexterm>
+<para><computeroutput>void EmisoraBLE::encenderEmisora (<link linkend="_class_emisora_b_l_e_1a922f7f1ab1063eb40c99e4a3676be258">CallbackConexionEstablecida</link> cbce, <link linkend="_class_emisora_b_l_e_1afd6faaf6a924a50ea027046703300b0b">CallbackConexionTerminada</link> cbct)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_emisora_b_l_e_1ac32548698cf69ecef9e96941fc2e1b94"/><section>
+    <title>estaAnunciando()</title>
+<indexterm><primary>estaAnunciando</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>estaAnunciando</secondary></indexterm>
+<para><computeroutput>bool EmisoraBLE::estaAnunciando ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_emisora_b_l_e_1aa863c5f29e1f0d4dd1ae023b30350960"/><section>
+    <title>getConexion()</title>
+<indexterm><primary>getConexion</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>getConexion</secondary></indexterm>
+<para><computeroutput>BLEConnection * EmisoraBLE::getConexion (uint16_t connHandle)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_emisora_b_l_e_1ae15e223776af83a8cac07564c168d0b9"/><section>
+    <title>instalarCallbackConexionEstablecida()</title>
+<indexterm><primary>instalarCallbackConexionEstablecida</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>instalarCallbackConexionEstablecida</secondary></indexterm>
+<para><computeroutput>void EmisoraBLE::instalarCallbackConexionEstablecida (<link linkend="_class_emisora_b_l_e_1a922f7f1ab1063eb40c99e4a3676be258">CallbackConexionEstablecida</link> cb)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_class_emisora_b_l_e_1a2bb6b319046a10641619c1388f7fe351"/><section>
+    <title>instalarCallbackConexionTerminada()</title>
+<indexterm><primary>instalarCallbackConexionTerminada</primary><secondary>EmisoraBLE</secondary></indexterm>
+<indexterm><primary>EmisoraBLE</primary><secondary>instalarCallbackConexionTerminada</secondary></indexterm>
+<para><computeroutput>void EmisoraBLE::instalarCallbackConexionTerminada (<link linkend="_class_emisora_b_l_e_1afd6faaf6a924a50ea027046703300b0b">CallbackConexionTerminada</link> cb)<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/<link linkend="__emisora_b_l_e_8h">EmisoraBLE.h</link></section>
+</section>

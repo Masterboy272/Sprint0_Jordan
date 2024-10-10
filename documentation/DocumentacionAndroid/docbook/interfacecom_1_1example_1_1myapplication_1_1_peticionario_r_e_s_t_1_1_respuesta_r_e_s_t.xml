@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_interfacecom_1_1example_1_1myapplication_1_1_peticionario_r_e_s_t_1_1_respuesta_r_e_s_t" xml:lang="en-US">
+<title>com.example.myapplication.PeticionarioREST.RespuestaREST Interface Reference</title>
+<indexterm><primary>com.example.myapplication.PeticionarioREST.RespuestaREST</primary></indexterm>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_interfacecom_1_1example_1_1myapplication_1_1_peticionario_r_e_s_t_1_1_respuesta_r_e_s_t_1a7295b9b0b766bd7288e83e82c833bcf9">callback</link> (int codigo, String cuerpo)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_interfacecom_1_1example_1_1myapplication_1_1_peticionario_r_e_s_t_1_1_respuesta_r_e_s_t_1a7295b9b0b766bd7288e83e82c833bcf9"/><section>
+    <title>callback()</title>
+<indexterm><primary>callback</primary><secondary>com.example.myapplication.PeticionarioREST.RespuestaREST</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.PeticionarioREST.RespuestaREST</primary><secondary>callback</secondary></indexterm>
+<para><computeroutput>void com.example.myapplication.PeticionarioREST.RespuestaREST.callback (int codigo, String cuerpo)</computeroutput></para></section>
+<para>
+The documentation for this interface was generated from the following file:</para>
+C:/Users/stips/Desktop/Sprint0_Tallal - copia/MyApplication/app/src/main/java/com/example/myapplication/<link linkend="__peticionario_r_e_s_t_8java">PeticionarioREST.java</link></section>
+</section>

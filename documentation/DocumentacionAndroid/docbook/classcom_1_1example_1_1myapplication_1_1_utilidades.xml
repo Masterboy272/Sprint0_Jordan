@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classcom_1_1example_1_1myapplication_1_1_utilidades" xml:lang="en-US">
+<title>com.example.myapplication.Utilidades Class Reference</title>
+<indexterm><primary>com.example.myapplication.Utilidades</primary></indexterm>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static byte[] <link linkend="_classcom_1_1example_1_1myapplication_1_1_utilidades_1a675df208dd86faf8c8d61dc4de418636">stringToBytes</link> (String texto)</para>
+</listitem>
+            <listitem><para>static UUID <link linkend="_classcom_1_1example_1_1myapplication_1_1_utilidades_1a3392bdf04b61093a0a8266b02c7a80bd">stringToUUID</link> (String uuid)</para>
+</listitem>
+            <listitem><para>static String <link linkend="_classcom_1_1example_1_1myapplication_1_1_utilidades_1a728d13f021102a624239d2e4adca14fe">uuidToString</link> (UUID uuid)</para>
+</listitem>
+            <listitem><para>static String <link linkend="_classcom_1_1example_1_1myapplication_1_1_utilidades_1afcb2056685e44aa3bcffe8e1eb38f1c7">uuidToHexString</link> (UUID uuid)</para>
+</listitem>
+            <listitem><para>static String <link linkend="_classcom_1_1example_1_1myapplication_1_1_utilidades_1aeeb152471625a61eaf4a66357b3e41f9">bytesToString</link> (byte[] bytes)</para>
+</listitem>
+            <listitem><para>static byte[] <link linkend="_classcom_1_1example_1_1myapplication_1_1_utilidades_1aaa5b8cff248599be4ae1f6a5023da2a7">dosLongToBytes</link> (long masSignificativos, long menosSignificativos)</para>
+</listitem>
+            <listitem><para>static int <link linkend="_classcom_1_1example_1_1myapplication_1_1_utilidades_1af40ff2bb8cb24102c06fdfe9febc1c2c">bytesToInt</link> (byte[] bytes)</para>
+</listitem>
+            <listitem><para>static long <link linkend="_classcom_1_1example_1_1myapplication_1_1_utilidades_1a91d743aca1b072978ae3fd88bb33746d">bytesToLong</link> (byte[] bytes)</para>
+</listitem>
+            <listitem><para>static int <link linkend="_classcom_1_1example_1_1myapplication_1_1_utilidades_1a2003c021719020a505c715ccf78fcedc">bytesToIntOK</link> (byte[] bytes)</para>
+</listitem>
+            <listitem><para>static String <link linkend="_classcom_1_1example_1_1myapplication_1_1_utilidades_1a91fe02ce5dde58e4303b72dd1a400a9f">bytesToHexString</link> (byte[] bytes)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_utilidades_1a91fe02ce5dde58e4303b72dd1a400a9f"/><section>
+    <title>bytesToHexString()</title>
+<indexterm><primary>bytesToHexString</primary><secondary>com.example.myapplication.Utilidades</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.Utilidades</primary><secondary>bytesToHexString</secondary></indexterm>
+<para><computeroutput>static String com.example.myapplication.Utilidades.bytesToHexString (byte[] bytes)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_utilidades_1af40ff2bb8cb24102c06fdfe9febc1c2c"/><section>
+    <title>bytesToInt()</title>
+<indexterm><primary>bytesToInt</primary><secondary>com.example.myapplication.Utilidades</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.Utilidades</primary><secondary>bytesToInt</secondary></indexterm>
+<para><computeroutput>static int com.example.myapplication.Utilidades.bytesToInt (byte[] bytes)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_utilidades_1a2003c021719020a505c715ccf78fcedc"/><section>
+    <title>bytesToIntOK()</title>
+<indexterm><primary>bytesToIntOK</primary><secondary>com.example.myapplication.Utilidades</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.Utilidades</primary><secondary>bytesToIntOK</secondary></indexterm>
+<para><computeroutput>static int com.example.myapplication.Utilidades.bytesToIntOK (byte[] bytes)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_utilidades_1a91d743aca1b072978ae3fd88bb33746d"/><section>
+    <title>bytesToLong()</title>
+<indexterm><primary>bytesToLong</primary><secondary>com.example.myapplication.Utilidades</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.Utilidades</primary><secondary>bytesToLong</secondary></indexterm>
+<para><computeroutput>static long com.example.myapplication.Utilidades.bytesToLong (byte[] bytes)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_utilidades_1aeeb152471625a61eaf4a66357b3e41f9"/><section>
+    <title>bytesToString()</title>
+<indexterm><primary>bytesToString</primary><secondary>com.example.myapplication.Utilidades</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.Utilidades</primary><secondary>bytesToString</secondary></indexterm>
+<para><computeroutput>static String com.example.myapplication.Utilidades.bytesToString (byte[] bytes)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_utilidades_1aaa5b8cff248599be4ae1f6a5023da2a7"/><section>
+    <title>dosLongToBytes()</title>
+<indexterm><primary>dosLongToBytes</primary><secondary>com.example.myapplication.Utilidades</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.Utilidades</primary><secondary>dosLongToBytes</secondary></indexterm>
+<para><computeroutput>static byte[] com.example.myapplication.Utilidades.dosLongToBytes (long masSignificativos, long menosSignificativos)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_utilidades_1a675df208dd86faf8c8d61dc4de418636"/><section>
+    <title>stringToBytes()</title>
+<indexterm><primary>stringToBytes</primary><secondary>com.example.myapplication.Utilidades</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.Utilidades</primary><secondary>stringToBytes</secondary></indexterm>
+<para><computeroutput>static byte[] com.example.myapplication.Utilidades.stringToBytes (String texto)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_utilidades_1a3392bdf04b61093a0a8266b02c7a80bd"/><section>
+    <title>stringToUUID()</title>
+<indexterm><primary>stringToUUID</primary><secondary>com.example.myapplication.Utilidades</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.Utilidades</primary><secondary>stringToUUID</secondary></indexterm>
+<para><computeroutput>static UUID com.example.myapplication.Utilidades.stringToUUID (String uuid)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_utilidades_1afcb2056685e44aa3bcffe8e1eb38f1c7"/><section>
+    <title>uuidToHexString()</title>
+<indexterm><primary>uuidToHexString</primary><secondary>com.example.myapplication.Utilidades</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.Utilidades</primary><secondary>uuidToHexString</secondary></indexterm>
+<para><computeroutput>static String com.example.myapplication.Utilidades.uuidToHexString (UUID uuid)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classcom_1_1example_1_1myapplication_1_1_utilidades_1a728d13f021102a624239d2e4adca14fe"/><section>
+    <title>uuidToString()</title>
+<indexterm><primary>uuidToString</primary><secondary>com.example.myapplication.Utilidades</secondary></indexterm>
+<indexterm><primary>com.example.myapplication.Utilidades</primary><secondary>uuidToString</secondary></indexterm>
+<para><computeroutput>static String com.example.myapplication.Utilidades.uuidToString (UUID uuid)<computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+C:/Users/stips/Desktop/Sprint0_Tallal - copia/MyApplication/app/src/main/java/com/example/myapplication/<link linkend="__utilidades_8java">Utilidades.java</link></section>
+</section>

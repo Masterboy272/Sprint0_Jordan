@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_1b3c2186cce69ffedcc736b81e775e9b" xml:lang="en-US">
+<title>C:/Users/stips/Desktop/Sprint0_Tallal - copia/MyApplication/app/src/main/java/com/example/myapplication Directory Reference</title>
+<indexterm><primary>C:/Users/stips/Desktop/Sprint0_Tallal - copia/MyApplication/app/src/main/java/com/example/myapplication Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="__logica_8java">Logica.java</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__main_activity_8java">MainActivity.java</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__medidas_8java">Medidas.java</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__peticionario_r_e_s_t_8java">PeticionarioREST.java</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__trama_i_beacon_8java">TramaIBeacon.java</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__utilidades_8java">Utilidades.java</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

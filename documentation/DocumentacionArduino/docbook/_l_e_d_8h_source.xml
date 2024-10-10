@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__l_e_d_8h_source" xml:lang="en-US">
+<title>LED.h</title>
+<indexterm><primary>C:/Users/stips/Desktop/Sprint0_Tallal - copia/arduino/HolaMundoIBeacon/HolaMundoIBeacon/LED.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">//&#32;-*-&#32;mode:&#32;c++&#32;-*-</emphasis>
+2 
+3 <emphasis role="preprocessor">#ifndef&#32;LED_H_INCLUIDO</emphasis>
+4 <emphasis role="preprocessor">#define&#32;LED_H_INCLUIDO</emphasis>
+5 
+6 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+7 <emphasis role="comment">//&#32;Jordi&#32;Bataller&#32;i&#32;Mascarell</emphasis>
+8 <emphasis role="comment">//&#32;2019-07-07</emphasis>
+9 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+10 
+11 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+12 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+13 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="__l_e_d_8h_1a2fb17dd710d89b92e59a349551733fa0">esperar</link>&#32;(<emphasis role="keywordtype">long</emphasis>&#32;tiempo)&#32;{
+14 &#32;&#32;delay&#32;(tiempo);
+15 }
+16 
+17 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+18 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+19 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_l_e_d">LED</link>&#32;{
+20 <emphasis role="keyword">private</emphasis>:
+21 &#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;numeroLED;
+22 &#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;encendido;
+23 <emphasis role="keyword">public</emphasis>:
+24 
+25 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+26 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+27 &#32;&#32;<link linkend="_class_l_e_d_1a027bcd6d546b47fd3ef22685ed1f73e2">LED</link>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;numero)
+28 &#32;&#32;&#32;&#32;:&#32;numeroLED&#32;(numero),&#32;encendido(false)
+29 &#32;&#32;{
+30 &#32;&#32;&#32;&#32;pinMode(numeroLED,&#32;OUTPUT);
+31 &#32;&#32;&#32;&#32;<link linkend="_class_l_e_d_1a7f961959fa7405fec54de6121415db80">apagar</link>&#32;();
+32 &#32;&#32;}
+33 
+34 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+35 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+36 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_l_e_d_1a58660bafc0f4d6016392feabac555812">encender</link>&#32;()&#32;{
+37 &#32;&#32;&#32;&#32;digitalWrite(numeroLED,&#32;HIGH);&#32;
+38 &#32;&#32;&#32;&#32;encendido&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+39 &#32;&#32;}
+40 
+41 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+42 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+43 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_l_e_d_1a7f961959fa7405fec54de6121415db80">apagar</link>&#32;()&#32;{
+44 &#32;&#32;&#32;&#32;&#32;&#32;digitalWrite(numeroLED,&#32;LOW);
+45 &#32;&#32;&#32;&#32;&#32;&#32;encendido&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+46 &#32;&#32;}
+47 
+48 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+49 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+50 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_l_e_d_1a9b1361dbee5de756d142b1a2c3e685da">alternar</link>&#32;()&#32;{
+51 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(encendido)&#32;{
+52 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_l_e_d_1a7f961959fa7405fec54de6121415db80">apagar</link>();
+53 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+54 &#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_l_e_d_1a58660bafc0f4d6016392feabac555812">encender</link>&#32;();
+55 &#32;&#32;&#32;&#32;}
+56 &#32;&#32;}&#32;<emphasis role="comment">//&#32;()</emphasis>
+57 
+58 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+59 &#32;&#32;<emphasis role="comment">//&#32;.........................................................</emphasis>
+60 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_l_e_d_1a7431e9efb39a2890f75b4e235b8f617e">brillar</link>&#32;(<emphasis role="keywordtype">long</emphasis>&#32;tiempo)&#32;{
+61 &#32;&#32;&#32;&#32;<link linkend="_class_l_e_d_1a58660bafc0f4d6016392feabac555812">encender</link>&#32;();
+62 &#32;&#32;&#32;&#32;<link linkend="__l_e_d_8h_1a2fb17dd710d89b92e59a349551733fa0">esperar</link>(tiempo);&#32;
+63 &#32;&#32;&#32;&#32;<link linkend="_class_l_e_d_1a7f961959fa7405fec54de6121415db80">apagar</link>&#32;();
+64 &#32;&#32;}
+65 };&#32;<emphasis role="comment">//&#32;class</emphasis>
+66 
+67 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+68 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+69 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+70 <emphasis role="comment">//&#32;----------------------------------------------------------</emphasis>
+71 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>
